@@ -1,0 +1,7 @@
+.next
+node_modules
+.local
+public/fonts
+playwright-report
+test-results
+package-lock.json
