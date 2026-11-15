@@ -1,8 +1,14 @@
-import { db } from '@/lib/prisma';
-import { AppError } from '@/lib/security';
 import { hash } from 'bcryptjs';
-import { randomUUID, randomBytes, createHash } from 'node:crypto';
-import { Prisma, type User, type VerificationStatus, type RequestStatus } from '@prisma/client';
+import { z } from 'zod';
+import { getDemoData, updateDemoData } from '@/lib/demo/store';
+import type {
+  DemoData,
+  User,
+  UserRecord,
+  WorkerRecord,
+  VerificationStatus,
+  RequestStatus,
+} from '@/lib/demo/types';
 import {
   registrationSchema,
   workerSchema,
@@ -11,156 +17,122 @@ import {
   passwordSchema,
   postcodeSchema,
 } from './validation';
-import { canReview, canTransitionRequest, requiredDocuments, publiclyVisible } from './domain';
-import { z } from 'zod';
-type Tx = Prisma.TransactionClient;
+import { canReview, canTransitionRequest, requiredDocuments } from './domain';
+const id = () => crypto.randomUUID();
 const split = (v: string) =>
   v
     .split(',')
-    .map((x) => x.trim())
+    .map((s) => s.trim())
     .filter(Boolean);
-const audit = (tx: Tx, actorId: string, action: string, entityType: string, entityId: string) =>
-  tx.auditLog.create({ data: { actorId, action, entityType, entityId } });
-const notify = (tx: Tx, userId: string, title: string, message: string) =>
-  tx.notification.create({ data: { userId, type: 'UPDATE', title, message } });
+function find<T>(rows: T[], predicate: (v: T) => boolean, message = 'Demo record not found.'): T {
+  const row = rows.find(predicate);
+  if (!row) throw new Error(message);
+  return row;
+}
+function active(data: DemoData, user: UserRecord, role?: string) {
+  const current = find(data.users, (u) => u.id === user.id);
+  if (current.status !== 'ACTIVE' || current.sessionVersion !== user.sessionVersion)
+    throw new Error('This demo session is no longer active.');
+  if (role && current.role !== role)
+    throw new Error(`${role === 'ADMIN' ? 'Administrator' : role} demo account required.`);
+  return current;
+}
+function audit(
+  data: DemoData,
+  actorId: string,
+  action: string,
+  entityType: string,
+  entityId: string,
+) {
+  data.auditLogs.unshift({
+    id: id(),
+    actorId,
+    action,
+    entityType,
+    entityId,
+    createdAt: new Date(),
+  });
+}
+function notify(data: DemoData, userId: string, title: string, message: string) {
+  data.notifications.unshift({
+    id: id(),
+    userId,
+    type: 'UPDATE',
+    title,
+    message,
+    isRead: false,
+    createdAt: new Date(),
+  });
+}
+function newWorker(user: UserRecord, profession: string): WorkerRecord {
+  return {
+    id: id(),
+    userId: user.id,
+    slug: `${user.firstName}-${user.lastName}-${id().slice(0, 8)}`.toLowerCase(),
+    profession,
+    jobTitle: '',
+    introduction: '',
+    biography: '',
+    experienceYears: 0,
+    hourlyRate: '20.00',
+    city: '',
+    postcode: '',
+    address: '',
+    dateOfBirth: '',
+    travelRadius: 10,
+    languages: ['English'],
+    specialisations: [],
+    registrationNumber: '',
+    preferredLocation: '',
+    liveIn: false,
+    overnight: false,
+    isListed: true,
+    verificationStatus: 'DRAFT',
+    onboardingStep: 1,
+    submittedAt: null,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    qualifications: [],
+    skills: [],
+    services: [],
+    availability: [],
+  };
+}
 export async function register(input: unknown) {
   const v = registrationSchema.parse(input);
-  const passwordHash = await hash(v.password, 12);
-  try {
-    return await db.$transaction(async (tx) => {
-      const user = await tx.user.create({
-        data: {
-          firstName: v.firstName,
-          lastName: v.lastName,
-          email: v.email,
-          passwordHash,
-          phone: v.phone,
-          role: v.role,
-          ...(v.role === 'CLIENT'
-            ? { client: { create: {} } }
-            : {
-                worker: {
-                  create: {
-                    profession: v.profession!,
-                    slug: `${v.firstName}-${v.lastName}-${randomUUID().slice(0, 8)}`.toLowerCase(),
-                  },
-                },
-              }),
-        },
-        select: { id: true, role: true },
-      });
-      await audit(tx, user.id, 'Account registered', 'User', user.id);
-      await notify(
-        tx,
-        user.id,
-        'Welcome to CareMatch',
-        'Your account is ready. Complete your profile to get started.',
-      );
-      return user;
-    });
-  } catch (e) {
-    if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === 'P2002')
-      throw new AppError('An account with this email already exists.');
-    throw e;
-  }
-}
-export async function saveWorker(user: User, input: unknown) {
-  if (user.role !== 'WORKER') throw new AppError('Worker account required.', 403);
-  const v = workerSchema.parse(input);
-  const w = await db.workerProfile.findUniqueOrThrow({
-    where: { userId: user.id },
-    include: { qualifications: true },
+  const passwordHash = await hash(v.password, 10);
+  return updateDemoData((data) => {
+    if (data.users.some((u) => u.email === v.email))
+      throw new Error('An account with this email already exists in this browser.');
+    const u: UserRecord = {
+      id: id(),
+      firstName: v.firstName,
+      lastName: v.lastName,
+      email: v.email,
+      passwordHash,
+      phone: v.phone,
+      role: v.role,
+      status: 'ACTIVE',
+      avatarUrl: '/images/avatar.svg',
+      sessionVersion: 0,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+    data.users.push(u);
+    if (v.role === 'WORKER') data.workers.push(newWorker(u, v.profession!));
+    else data.clients.push({ id: id(), userId: u.id, city: '', postcode: '', address: '' });
+    audit(data, u.id, 'Account registered', 'User', u.id);
+    notify(
+      data,
+      u.id,
+      'Welcome to CareMatch',
+      'Your fictional demo account is ready. Complete your profile to get started.',
+    );
+    return { id: u.id, role: u.role };
   });
-  if (['PENDING', 'UNDER_REVIEW', 'SUSPENDED'].includes(w.verificationStatus))
-    throw new AppError('Your application cannot be edited during review or suspension.');
-  const sensitive =
-    w.profession !== v.profession ||
-    w.registrationNumber !== v.registrationNumber ||
-    w.qualifications.map((q) => q.qualificationName).join(',') !==
-      split(v.qualifications).join(',') ||
-    user.firstName !== v.firstName ||
-    user.lastName !== v.lastName ||
-    w.dateOfBirth !== v.dateOfBirth;
-  const reReview = w.verificationStatus === 'APPROVED' && sensitive;
-  const {
-    firstName,
-    lastName,
-    phone,
-    skills,
-    qualifications,
-    services,
-    languages,
-    specialisations,
-    ...data
-  } = v;
-  await db.$transaction(async (tx) => {
-    const changed = await tx.workerProfile.updateMany({
-      where: { id: w.id, updatedAt: w.updatedAt },
-      data: {
-        ...data,
-        languages: split(languages),
-        specialisations: split(specialisations),
-        ...(reReview ? { verificationStatus: 'DRAFT' as const } : {}),
-      },
-    });
-    if (!changed.count) throw new AppError('Profile changed. Reload and try again.', 409);
-    await tx.user.update({ where: { id: user.id }, data: { firstName, lastName, phone } });
-    await tx.workerSkill.deleteMany({ where: { workerId: w.id } });
-    await tx.workerSkill.createMany({
-      data: split(skills).map((skillName) => ({ workerId: w.id, skillName })),
-    });
-    await tx.workerQualification.deleteMany({ where: { workerId: w.id } });
-    await tx.workerQualification.createMany({
-      data: split(qualifications).map((qualificationName) => ({
-        workerId: w.id,
-        qualificationName,
-      })),
-    });
-    await tx.workerService.deleteMany({ where: { workerId: w.id } });
-    await tx.workerService.createMany({
-      data: services.map((serviceType) => ({ workerId: w.id, serviceType })),
-    });
-    if (reReview) {
-      await tx.verificationReview.create({
-        data: {
-          workerId: w.id,
-          reviewedBy: user.id,
-          previousStatus: 'APPROVED',
-          newStatus: 'DRAFT',
-          notes: 'Credentials changed; re-review required.',
-        },
-      });
-      await tx.verificationDocument.updateMany({
-        where: { workerId: w.id },
-        data: { reviewStatus: 'UPLOADED' },
-      });
-      await notify(
-        tx,
-        user.id,
-        'Re-review required',
-        'Your credentials have changed. Resubmit your profile for review.',
-      );
-    }
-    await audit(tx, user.id, 'Professional profile saved', 'WorkerProfile', w.id);
-  });
-  return { reReview };
 }
-export async function saveDraft(user: User, input: unknown) {
-  if (user.role !== 'WORKER') throw new AppError('Worker account required.', 403);
-  const v = z
-    .object({ step: z.number().int().min(1).max(5), data: z.record(z.string(), z.unknown()) })
-    .parse(input);
-  const w = await db.workerProfile.findUniqueOrThrow({ where: { userId: user.id } });
-  if (!['DRAFT', 'REJECTED'].includes(w.verificationStatus))
-    throw new AppError('Profile is locked during review.');
-  // Validate individual populated fields while allowing unfinished steps.
-  const schema = workerSchema.partial();
-  const p = schema.parse(v.data);
-  // Zod defaults also run inside optional fields. A partial step must only write
-  // explicitly supplied keys, otherwise later steps erase earlier credentials.
-  for (const key of Object.keys(p) as (keyof typeof p)[]) {
-    if (!Object.hasOwn(v.data, key)) delete p[key];
-  }
+function applyWorker(data: DemoData, user: UserRecord, v: Partial<z.infer<typeof workerSchema>>) {
+  const w = find(data.workers, (w) => w.userId === user.id);
   const {
     firstName,
     lastName,
@@ -171,103 +143,138 @@ export async function saveDraft(user: User, input: unknown) {
     languages,
     specialisations,
     ...rest
-  } = p;
-  await db.$transaction(async (tx) => {
-    const updated = await tx.workerProfile.updateMany({
-      where: { id: w.id, updatedAt: w.updatedAt },
-      data: {
-        ...rest,
-        onboardingStep: v.step,
-        ...(languages ? { languages: split(languages) } : {}),
-        ...(specialisations ? { specialisations: split(specialisations) } : {}),
-      },
-    });
-    if (!updated.count) throw new AppError('Profile changed. Reload and try again.', 409);
-    if (firstName || lastName || phone)
-      await tx.user.update({ where: { id: user.id }, data: { firstName, lastName, phone } });
-    if (skills) {
-      await tx.workerSkill.deleteMany({ where: { workerId: w.id } });
-      await tx.workerSkill.createMany({
-        data: split(skills).map((skillName) => ({ workerId: w.id, skillName })),
+  } = v;
+  Object.assign(w, rest, { updatedAt: new Date() });
+  if (firstName !== undefined) user.firstName = firstName;
+  if (lastName !== undefined) user.lastName = lastName;
+  if (phone !== undefined) user.phone = phone;
+  if (languages !== undefined) w.languages = split(languages);
+  if (specialisations !== undefined) w.specialisations = split(specialisations);
+  if (skills !== undefined)
+    w.skills = split(skills).map((skillName) => ({ id: id(), workerId: w.id, skillName }));
+  if (qualifications !== undefined)
+    w.qualifications = split(qualifications).map((qualificationName) => ({
+      id: id(),
+      workerId: w.id,
+      qualificationName,
+      institution: '',
+      yearCompleted: new Date().getFullYear(),
+    }));
+  if (services !== undefined)
+    w.services = services.map((serviceType) => ({ id: id(), workerId: w.id, serviceType }));
+  return w;
+}
+export async function saveDraft(user: User, input: unknown) {
+  const v = z
+    .object({ step: z.number().int().min(1).max(5), data: z.record(z.string(), z.unknown()) })
+    .parse(input);
+  const parsed = workerSchema.partial().parse(v.data);
+  for (const key of Object.keys(parsed) as (keyof typeof parsed)[])
+    if (!Object.hasOwn(v.data, key)) delete parsed[key];
+  updateDemoData((data) => {
+    const u = active(data, user, 'WORKER');
+    const w = find(data.workers, (w) => w.userId === u.id);
+    if (!['DRAFT', 'REJECTED'].includes(w.verificationStatus))
+      throw new Error('Profile is locked during review.');
+    applyWorker(data, u, { ...parsed, onboardingStep: v.step });
+  });
+}
+export async function saveWorker(user: User, input: unknown) {
+  const v = workerSchema.parse(input);
+  return updateDemoData((data) => {
+    const u = active(data, user, 'WORKER');
+    const w = find(data.workers, (w) => w.userId === u.id);
+    if (['PENDING', 'UNDER_REVIEW', 'SUSPENDED'].includes(w.verificationStatus))
+      throw new Error('This profile is locked during review or suspension.');
+    const sensitive =
+      w.profession !== v.profession ||
+      w.registrationNumber !== v.registrationNumber ||
+      w.qualifications.map((q) => q.qualificationName).join(',') !==
+        split(v.qualifications).join(',') ||
+      u.firstName !== v.firstName ||
+      u.lastName !== v.lastName ||
+      w.dateOfBirth !== v.dateOfBirth;
+    const reReview = w.verificationStatus === 'APPROVED' && sensitive;
+    applyWorker(data, u, v);
+    if (reReview) {
+      w.verificationStatus = 'DRAFT';
+      data.reviews.push({
+        id: id(),
+        workerId: w.id,
+        reviewedBy: u.id,
+        previousStatus: 'APPROVED',
+        newStatus: 'DRAFT',
+        notes: 'Credentials changed; re-review required.',
+        reviewedAt: new Date(),
       });
+      data.documents
+        .filter((d) => d.workerId === w.id)
+        .forEach((d) => {
+          d.reviewStatus = 'UPLOADED';
+        });
+      notify(
+        data,
+        u.id,
+        'Re-review required',
+        'Your credentials have changed. Resubmit your demo profile.',
+      );
     }
-    if (qualifications) {
-      await tx.workerQualification.deleteMany({ where: { workerId: w.id } });
-      await tx.workerQualification.createMany({
-        data: split(qualifications).map((qualificationName) => ({
-          workerId: w.id,
-          qualificationName,
-        })),
-      });
-    }
-    if (services) {
-      await tx.workerService.deleteMany({ where: { workerId: w.id } });
-      await tx.workerService.createMany({
-        data: services.map((serviceType) => ({ workerId: w.id, serviceType })),
-      });
-    }
+    audit(data, u.id, 'Professional profile saved', 'WorkerProfile', w.id);
+    return { reReview };
   });
 }
 export async function submitVerification(user: User) {
-  if (user.role !== 'WORKER') throw new AppError('Worker account required.', 403);
-  await db.$transaction(async (tx) => {
-    const w = await tx.workerProfile.findUniqueOrThrow({
-      where: { userId: user.id },
-      include: { documents: true, qualifications: true, skills: true, services: true },
-    });
+  updateDemoData((data) => {
+    const u = active(data, user, 'WORKER');
+    const w = find(data.workers, (w) => w.userId === u.id);
     if (!['DRAFT', 'REJECTED'].includes(w.verificationStatus))
-      throw new AppError('This application has already been submitted.');
+      throw new Error('This application has already been submitted.');
     workerSchema.parse({
       ...w,
-      firstName: user.firstName,
-      lastName: user.lastName,
-      phone: user.phone,
-      hourlyRate: w.hourlyRate.toString(),
+      firstName: u.firstName,
+      lastName: u.lastName,
+      phone: u.phone,
       languages: w.languages.join(','),
+      specialisations: w.specialisations.join(','),
       skills: w.skills.map((s) => s.skillName).join(','),
       qualifications: w.qualifications.map((q) => q.qualificationName).join(','),
-      specialisations: w.specialisations.join(','),
       services: w.services.map((s) => s.serviceType),
     });
+    const docs = data.documents.filter((d) => d.workerId === w.id);
     const missing = requiredDocuments(w.profession).filter(
-      (t) => !w.documents.some((d) => d.documentType === t),
+      (t) => !docs.some((d) => d.documentType === t),
     );
-    if (missing.length) throw new AppError(`Upload required evidence: ${missing.join(', ')}.`);
+    if (missing.length) throw new Error(`Upload required evidence: ${missing.join(', ')}.`);
     if (['Nurse', 'Doctor'].includes(w.profession) && !w.registrationNumber)
-      throw new AppError('Please supply your professional registration number.');
-    const updated = await tx.workerProfile.updateMany({
-      where: { id: w.id, verificationStatus: w.verificationStatus },
-      data: { verificationStatus: 'PENDING', onboardingStep: 5, submittedAt: new Date() },
+      throw new Error('Supply a fictional professional registration number.');
+    data.reviews.push({
+      id: id(),
+      workerId: w.id,
+      reviewedBy: u.id,
+      previousStatus: w.verificationStatus,
+      newStatus: 'PENDING',
+      notes: 'Application submitted for internal demo review.',
+      reviewedAt: new Date(),
     });
-    if (!updated.count) throw new AppError('Application changed. Refresh and try again.', 409);
-    await tx.verificationReview.create({
-      data: {
-        workerId: w.id,
-        reviewedBy: user.id,
-        previousStatus: w.verificationStatus,
-        newStatus: 'PENDING',
-        notes: 'Application submitted for manual demo review.',
-      },
-    });
-    await audit(tx, user.id, 'Verification submitted', 'WorkerProfile', w.id);
-    await notify(
-      tx,
-      user.id,
-      'Application submitted',
-      'Your profile has been submitted for review. You will be notified when the review is complete.',
-    );
-    const admins = await tx.user.findMany({ where: { role: 'ADMIN', status: 'ACTIVE' } });
-    for (const a of admins)
-      await notify(
-        tx,
-        a.id,
-        'New verification application',
-        `${user.firstName} ${user.lastName} is ready for review.`,
+    w.verificationStatus = 'PENDING';
+    w.submittedAt = new Date();
+    w.onboardingStep = 5;
+    w.updatedAt = new Date();
+    audit(data, u.id, 'Verification submitted', 'WorkerProfile', w.id);
+    notify(data, u.id, 'Application submitted', 'Your profile has been submitted for review.');
+    data.users
+      .filter((a) => a.role === 'ADMIN')
+      .forEach((a) =>
+        notify(
+          data,
+          a.id,
+          'New verification application',
+          `${u.firstName} ${u.lastName} is ready for demo review.`,
+        ),
       );
   });
 }
 export async function reviewWorker(user: User, input: unknown) {
-  if (user.role !== 'ADMIN') throw new AppError('Administrator permission required.', 403);
   const v = z
     .object({
       id: z.uuid(),
@@ -276,167 +283,168 @@ export async function reviewWorker(user: User, input: unknown) {
       confirmed: z.boolean().default(false),
     })
     .parse(input);
-  if (v.status === 'APPROVED' && !v.confirmed)
-    throw new AppError('Confirm that you have reviewed this application.');
-  if (['REJECTED', 'SUSPENDED'].includes(v.status) && v.notes.trim().length < 10)
-    throw new AppError('Give a reason of at least 10 characters.');
-  await db.$transaction(async (tx) => {
-    const w = await tx.workerProfile.findUniqueOrThrow({
-      where: { id: v.id },
-      include: { documents: true, user: true },
-    });
-    if (!canReview(w.verificationStatus, v.status as VerificationStatus))
-      throw new AppError('This verification transition is not permitted.', 409);
-    if (
-      v.status === 'APPROVED' &&
-      (w.user.status !== 'ACTIVE' ||
+  updateDemoData((data) => {
+    active(data, user, 'ADMIN');
+    const w = find(data.workers, (w) => w.id === v.id);
+    if (!canReview(w.verificationStatus, v.status))
+      throw new Error('This verification transition is not permitted.');
+    if (v.status === 'APPROVED' && !v.confirmed)
+      throw new Error('Confirm your application review.');
+    if (['REJECTED', 'SUSPENDED'].includes(v.status) && v.notes.trim().length < 10)
+      throw new Error('Give a reason of at least 10 characters.');
+    if (v.status === 'APPROVED') {
+      const docs = data.documents.filter((d) => d.workerId === w.id);
+      if (
+        find(data.users, (u) => u.id === w.userId).status !== 'ACTIVE' ||
         requiredDocuments(w.profession).some(
-          (t) => !w.documents.some((d) => d.documentType === t && d.reviewStatus === 'REVIEWED'),
-        ))
-    )
-      throw new AppError(
-        'Review each required document and ensure the account is active before approval.',
-      );
-    const changed = await tx.workerProfile.updateMany({
-      where: { id: w.id, verificationStatus: w.verificationStatus },
-      data: { verificationStatus: v.status },
+          (t) => !docs.some((d) => d.documentType === t && d.reviewStatus === 'REVIEWED'),
+        )
+      )
+        throw new Error(
+          'Review each required document and ensure the account is active before approval.',
+        );
+    }
+    data.reviews.push({
+      id: id(),
+      workerId: w.id,
+      reviewedBy: user.id,
+      previousStatus: w.verificationStatus,
+      newStatus: v.status,
+      notes: v.notes || 'Internal demo review. No external register check performed.',
+      reviewedAt: new Date(),
     });
-    if (!changed.count)
-      throw new AppError('Another reviewer changed this application. Refresh and try again.', 409);
-    await tx.verificationReview.create({
-      data: {
-        workerId: w.id,
-        reviewedBy: user.id,
-        previousStatus: w.verificationStatus,
-        newStatus: v.status,
-        notes: v.notes || 'Internal demo review; no external register check performed.',
-      },
-    });
-    await audit(tx, user.id, `Verification ${v.status.toLowerCase()}`, 'WorkerProfile', w.id);
-    await notify(
-      tx,
+    w.verificationStatus = v.status;
+    w.updatedAt = new Date();
+    audit(data, user.id, `Verification ${v.status.toLowerCase()}`, 'WorkerProfile', w.id);
+    notify(
+      data,
       w.userId,
       `Verification: ${v.status.toLowerCase().replace('_', ' ')}`,
-      v.notes || 'Your application status has been updated. This is an internal demo review.',
+      v.notes || 'Your demo application status has changed.',
     );
   });
 }
+export async function reviewDocument(user: User, input: unknown) {
+  const { id: documentId } = z.object({ id: z.uuid() }).parse(input);
+  updateDemoData((data) => {
+    active(data, user, 'ADMIN');
+    const doc = find(data.documents, (d) => d.id === documentId);
+    const w = find(data.workers, (w) => w.id === doc.workerId);
+    if (w.verificationStatus !== 'UNDER_REVIEW')
+      throw new Error('Start the application review first.');
+    doc.reviewStatus = 'REVIEWED';
+    audit(data, user.id, 'Sample document reviewed', 'VerificationDocument', doc.id);
+  });
+}
 export async function createRequest(user: User, input: unknown) {
-  if (user.role !== 'CLIENT')
-    throw new AppError('Sign in with a client account to request care.', 403);
   const v = requestSchema.parse(input);
-  return db.$transaction(
-    async (tx) => {
-      const w = await tx.workerProfile.findUniqueOrThrow({
-        where: { id: v.workerId },
-        include: { user: true, services: true },
-      });
-      if (!publiclyVisible(w))
-        throw new AppError('This professional is not available for new requests.');
-      if (!w.services.some((s) => s.serviceType === v.careType))
-        throw new AppError('Choose a service offered by this professional.');
-      const c = await tx.clientProfile.findUniqueOrThrow({ where: { userId: user.id } });
-      const request = await tx.careRequest.create({
-        data: { ...v, requestedDate: new Date(`${v.requestedDate}T12:00:00Z`), clientId: c.id },
-      });
-      await notify(
-        tx,
-        w.userId,
-        'New care request',
-        `${user.firstName} has requested ${v.careType.toLowerCase()}.`,
-      );
-      await audit(tx, user.id, 'Care request created', 'CareRequest', request.id);
-      return request;
-    },
-    { isolationLevel: Prisma.TransactionIsolationLevel.Serializable },
-  );
+  return updateDemoData((data) => {
+    active(data, user, 'CLIENT');
+    const w = find(data.workers, (w) => w.id === v.workerId);
+    if (
+      w.verificationStatus !== 'APPROVED' ||
+      !w.isListed ||
+      find(data.users, (u) => u.id === w.userId).status !== 'ACTIVE'
+    )
+      throw new Error('This professional is not available for new requests.');
+    if (!w.services.some((s) => s.serviceType === v.careType))
+      throw new Error('Choose a service offered by this professional.');
+    const c = find(data.clients, (c) => c.userId === user.id);
+    const r = {
+      ...v,
+      id: id(),
+      clientId: c.id,
+      requestedDate: new Date(`${v.requestedDate}T12:00:00Z`),
+      status: 'PENDING' as const,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+    data.requests.push(r);
+    notify(
+      data,
+      w.userId,
+      'New care request',
+      `${user.firstName} requested ${v.careType.toLowerCase()}.`,
+    );
+    audit(data, user.id, 'Care request created', 'CareRequest', r.id);
+    return r;
+  });
 }
 export async function transitionRequest(user: User, input: unknown) {
   const v = z
     .object({ id: z.uuid(), status: z.enum(['ACCEPTED', 'DECLINED', 'CANCELLED', 'COMPLETED']) })
     .parse(input);
-  await db.$transaction(
-    async (tx) => {
-      const r = await tx.careRequest.findUniqueOrThrow({
-        where: { id: v.id },
-        include: { client: true, worker: { include: { user: true } } },
-      });
-      if (user.id !== (user.role === 'CLIENT' ? r.client.userId : r.worker.userId))
-        throw new AppError('This request belongs to another account.', 403);
-      if (!canTransitionRequest(r.status, v.status as RequestStatus, user.role))
-        throw new AppError('This request cannot be changed to that status.', 409);
-      if (
-        v.status === 'ACCEPTED' &&
-        (r.worker.verificationStatus !== 'APPROVED' || r.worker.user.status !== 'ACTIVE')
-      )
-        throw new AppError('Only approved, active professionals can accept requests.');
-      const changed = await tx.careRequest.updateMany({
-        where: { id: r.id, status: r.status },
-        data: { status: v.status },
-      });
-      if (!changed.count) throw new AppError('Request changed. Refresh and try again.', 409);
-      await notify(
-        tx,
-        user.role === 'CLIENT' ? r.worker.userId : r.client.userId,
-        `Request ${v.status.toLowerCase()}`,
-        `Your ${r.careType.toLowerCase()} request has been ${v.status.toLowerCase()}.`,
-      );
-      await audit(tx, user.id, `Care request ${v.status.toLowerCase()}`, 'CareRequest', r.id);
-    },
-    { isolationLevel: Prisma.TransactionIsolationLevel.Serializable },
-  );
+  updateDemoData((data) => {
+    active(data, user);
+    const r = find(data.requests, (r) => r.id === v.id);
+    const w = find(data.workers, (w) => w.id === r.workerId);
+    const c = find(data.clients, (c) => c.id === r.clientId);
+    if (user.id !== (user.role === 'CLIENT' ? c.userId : w.userId))
+      throw new Error('This request belongs to another account.');
+    if (!canTransitionRequest(r.status, v.status, user.role))
+      throw new Error('This request cannot be changed to that status.');
+    if (
+      v.status === 'ACCEPTED' &&
+      (w.verificationStatus !== 'APPROVED' ||
+        find(data.users, (u) => u.id === w.userId).status !== 'ACTIVE')
+    )
+      throw new Error('Only approved, active professionals can accept requests.');
+    r.status = v.status;
+    r.updatedAt = new Date();
+    notify(
+      data,
+      user.role === 'CLIENT' ? w.userId : c.userId,
+      `Request ${v.status.toLowerCase()}`,
+      `Your ${r.careType.toLowerCase()} request has been ${v.status.toLowerCase()}.`,
+    );
+    audit(data, user.id, `Care request ${v.status.toLowerCase()}`, 'CareRequest', r.id);
+  });
 }
 export async function favourite(user: User, input: unknown) {
-  if (user.role !== 'CLIENT') throw new AppError('Client account required.', 403);
-  const { workerId, saved } = z.object({ workerId: z.uuid(), saved: z.boolean() }).parse(input);
-  const client = await db.clientProfile.findUniqueOrThrow({ where: { userId: user.id } });
-  if (!saved) {
-    await db.favourite.deleteMany({ where: { clientId: client.id, workerId } });
-    return;
-  }
-  const w = await db.workerProfile.findUniqueOrThrow({
-    where: { id: workerId },
-    include: { user: true },
-  });
-  if (!publiclyVisible(w)) throw new AppError('This professional is no longer listed.');
-  await db.favourite.upsert({
-    where: { clientId_workerId: { clientId: client.id, workerId } },
-    create: { clientId: client.id, workerId },
-    update: {},
+  const v = z.object({ workerId: z.uuid(), saved: z.boolean() }).parse(input);
+  updateDemoData((data) => {
+    active(data, user, 'CLIENT');
+    const c = find(data.clients, (c) => c.userId === user.id);
+    if (!v.saved) {
+      data.favourites = data.favourites.filter(
+        (f) => f.clientId !== c.id || f.workerId !== v.workerId,
+      );
+      return;
+    }
+    const w = find(data.workers, (w) => w.id === v.workerId);
+    if (
+      w.verificationStatus !== 'APPROVED' ||
+      !w.isListed ||
+      find(data.users, (u) => u.id === w.userId).status !== 'ACTIVE'
+    )
+      throw new Error('This professional is not listed.');
+    if (!data.favourites.some((f) => f.clientId === c.id && f.workerId === w.id))
+      data.favourites.push({ id: id(), clientId: c.id, workerId: w.id, createdAt: new Date() });
   });
 }
 export async function availability(user: User, input: unknown) {
-  if (user.role !== 'WORKER') throw new AppError('Worker account required.', 403);
   const slots = availabilitySchema.parse(input);
-  const w = await db.workerProfile.findUniqueOrThrow({ where: { userId: user.id } });
-  await db.$transaction(
-    slots.map((s) =>
-      db.workerAvailability.upsert({
-        where: { workerId_dayOfWeek: { workerId: w.id, dayOfWeek: s.dayOfWeek } },
-        create: { ...s, workerId: w.id },
-        update: s,
-      }),
-    ),
-  );
+  updateDemoData((data) => {
+    active(data, user, 'WORKER');
+    const w = find(data.workers, (w) => w.userId === user.id);
+    w.availability = slots.map((s) => ({ ...s, id: id(), workerId: w.id }));
+    w.updatedAt = new Date();
+  });
 }
 export async function accountStatus(user: User, input: unknown) {
-  if (user.role !== 'ADMIN') throw new AppError('Administrator permission required.', 403);
   const v = z.object({ id: z.uuid(), status: z.enum(['ACTIVE', 'SUSPENDED']) }).parse(input);
-  if (v.id === user.id) throw new AppError('You cannot suspend your own account.');
-  await db.$transaction(async (tx) => {
-    const target = await tx.user.findUniqueOrThrow({ where: { id: v.id } });
-    if (target.role === 'ADMIN')
-      throw new AppError('Administrator accounts cannot be changed here.');
-    await tx.user.update({
-      where: { id: v.id },
-      data: { status: v.status, sessionVersion: { increment: 1 } },
-    });
-    await audit(tx, user.id, `Account ${v.status.toLowerCase()}`, 'User', v.id);
-    await notify(
-      tx,
-      v.id,
+  updateDemoData((data) => {
+    active(data, user, 'ADMIN');
+    const u = find(data.users, (u) => u.id === v.id);
+    if (u.role === 'ADMIN') throw new Error('Administrator accounts cannot be changed here.');
+    u.status = v.status;
+    u.sessionVersion++;
+    audit(data, user.id, `Account ${v.status.toLowerCase()}`, 'User', u.id);
+    notify(
+      data,
+      u.id,
       `Account ${v.status.toLowerCase()}`,
-      'An administrator has updated your account status.',
+      'A demo administrator updated this account.',
     );
   });
 }
@@ -450,50 +458,64 @@ export async function profile(user: User, input: unknown) {
       postcode: postcodeSchema,
     })
     .parse(input);
-  if (user.role === 'WORKER')
-    throw new AppError('Use your professional profile to edit these details.');
-  await db.$transaction(async (tx) => {
-    await tx.user.update({
-      where: { id: user.id },
-      data: { firstName: v.firstName, lastName: v.lastName, phone: v.phone },
-    });
-    if (user.role === 'CLIENT')
-      await tx.clientProfile.update({
-        where: { userId: user.id },
-        data: { city: v.city, postcode: v.postcode },
+  updateDemoData((data) => {
+    const u = active(data, user);
+    if (u.role === 'WORKER')
+      throw new Error('Use your professional profile to edit these details.');
+    Object.assign(u, { firstName: v.firstName, lastName: v.lastName, phone: v.phone });
+    if (u.role === 'CLIENT')
+      Object.assign(
+        find(data.clients, (c) => c.userId === u.id),
+        { city: v.city, postcode: v.postcode },
+      );
+  });
+}
+export async function readNotifications(user: User) {
+  updateDemoData((data) => {
+    active(data, user);
+    data.notifications
+      .filter((n) => n.userId === user.id)
+      .forEach((n) => {
+        n.isRead = true;
       });
   });
 }
+async function digest(token: string) {
+  const bytes = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(token));
+  return Array.from(new Uint8Array(bytes))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
 export async function forgot(input: unknown) {
   const { email } = z.object({ email: z.email().toLowerCase() }).parse(input);
-  const user = await db.user.findUnique({ where: { email } });
-  if (!user) return {};
-  const token = randomBytes(32).toString('hex');
-  await db.resetToken.create({
-    data: {
-      userId: user.id,
-      tokenHash: createHash('sha256').update(token).digest('hex'),
-      expiresAt: new Date(Date.now() + 30 * 60000),
-    },
+  const u = getDemoData().users.find((u) => u.email === email);
+  if (!u) return {};
+  const token = Array.from(crypto.getRandomValues(new Uint8Array(32)))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+  const tokenHash = await digest(token);
+  updateDemoData((data) => {
+    data.resetTokens.push({
+      id: id(),
+      userId: u.id,
+      tokenHash,
+      expiresAt: new Date(Date.now() + 1800000),
+    });
   });
-  return process.env.DEMO_MODE === 'true' && process.env.NODE_ENV === 'development'
-    ? { resetLink: `/reset-password?token=${token}` }
-    : {};
+  return { resetLink: `/reset-password?token=${token}` };
 }
 export async function resetPassword(input: unknown) {
   const v = z.object({ token: z.string().length(64), password: passwordSchema }).parse(input);
-  const tokenHash = createHash('sha256').update(v.token).digest('hex');
-  const passwordHash = await hash(v.password, 12);
-  await db.$transaction(async (tx) => {
-    const t = await tx.resetToken.findUnique({ where: { tokenHash } });
-    if (!t || t.expiresAt < new Date())
-      throw new AppError('This reset link is invalid or has expired.');
-    const used = await tx.resetToken.deleteMany({ where: { id: t.id } });
-    if (!used.count) throw new AppError('This reset link has already been used.');
-    await tx.user.update({
-      where: { id: t.userId },
-      data: { passwordHash, sessionVersion: { increment: 1 } },
-    });
-    await tx.resetToken.deleteMany({ where: { userId: t.userId } });
+  const tokenHash = await digest(v.token);
+  const passwordHash = await hash(v.password, 10);
+  updateDemoData((data) => {
+    const token = data.resetTokens.find(
+      (t) => t.tokenHash === tokenHash && t.expiresAt > new Date(),
+    );
+    if (!token) throw new Error('This demo reset link is invalid or expired.');
+    const u = find(data.users, (u) => u.id === token.userId);
+    u.passwordHash = passwordHash;
+    u.sessionVersion++;
+    data.resetTokens = data.resetTokens.filter((t) => t.userId !== u.id);
   });
 }

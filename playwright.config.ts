@@ -1,5 +1,5 @@
 import { defineConfig } from '@playwright/test';
-import 'dotenv/config';
+
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: false,
@@ -7,7 +7,7 @@ export default defineConfig({
   timeout: 90000,
   expect: { timeout: 15000 },
   use: {
-    baseURL: process.env.NEXTAUTH_URL || 'http://localhost:3002',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3002',
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
   },

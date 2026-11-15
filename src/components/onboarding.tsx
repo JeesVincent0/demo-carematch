@@ -35,7 +35,13 @@ type Values = {
   isListed: boolean;
   onboardingStep: number;
 };
-type Doc = { id: string; documentType: string; originalFileName: string; reviewStatus: string };
+type Doc = {
+  id: string;
+  documentType: string;
+  originalFileName: string;
+  dataUrl: string;
+  reviewStatus: string;
+};
 export function Onboarding({
   initial,
   documents,
@@ -154,17 +160,18 @@ export function Onboarding({
     <div key="personal" className="stack">
       <h2>Let&apos;s start with you.</h2>
       <p className="small muted">
-        Your address and date of birth stay private. Use fictional details for this demo.
+        Use fictional details only. All demo data is stored in this browser and is not protected
+        authentication.
       </p>
       <Upload />
       <div className="form-grid">
         {text('firstName', 'First name')}
         {text('lastName', 'Last name')}
         {text('phone', 'Contact number', 'tel')}
-        {text('dateOfBirth', 'Date of birth (optional, private)', 'date')}
+        {text('dateOfBirth', 'Date of birth (optional, demo only)', 'date')}
         {text('city', 'City')}
         {text('postcode', 'Postcode')}
-        {text('address', 'Address (optional, private)', 'text', true)}
+        {text('address', 'Address (optional, demo only)', 'text', true)}
         <Field label="Short introduction" full>
           <textarea
             {...fields('introduction')}
@@ -194,8 +201,8 @@ export function Onboarding({
           text(
             'registrationNumber',
             v.profession === 'Nurse'
-              ? 'NMC registration number (private, demo only)'
-              : 'GMC registration number (private, demo only)',
+              ? 'NMC registration number (demo only)'
+              : 'GMC registration number (demo only)',
             'text',
             true,
           )}
@@ -250,7 +257,7 @@ export function Onboarding({
       </p>
     </div>,
     <div key="verification" className="stack">
-      <h2>A little evidence. Kept private.</h2>
+      <h2>Sample evidence, stored in this browser.</h2>
       <div className="dashboard-note">
         <ShieldCheck size={20} /> Use sample documents only. No external identity or
         professional-register checks are performed.
@@ -267,8 +274,8 @@ export function Onboarding({
                 {d.originalFileName} · {d.reviewStatus.toLowerCase()}
               </small>
             </div>
-            <a href={`/api/documents/${d.id}`} target="_blank" rel="noreferrer">
-              Download privately ↗
+            <a href={d.dataUrl} download={d.originalFileName} target="_blank" rel="noreferrer">
+              Download sample ↗
             </a>
           </div>
         ))}

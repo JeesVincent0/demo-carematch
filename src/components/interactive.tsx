@@ -3,22 +3,15 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X, LogOut, Heart, Loader2 } from 'lucide-react';
-import { signOut } from 'next-auth/react';
+import { signOut } from '@/lib/auth';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { Button } from './ui/button';
 import { useHydrated } from '@/hooks/use-hydrated';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from './ui/dialog';
-export async function action(name: string, data: unknown = {}) {
-  const res = await fetch(`/api/actions/${name}`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data),
-  });
-  const json = await res.json();
-  if (!res.ok) throw new Error(json.error || 'Something went wrong.');
-  return json;
-}
+export { demoAction as action } from '@/lib/demo/actions';
+import { demoAction as action } from '@/lib/demo/actions';
+import { uploadDemoFile } from '@/lib/demo/uploads';
 export function SafeImage({
   src,
   alt,
@@ -43,7 +36,7 @@ export function SafeImage({
       height={height}
       priority={priority}
       className={className}
-      unoptimized={src.startsWith('/api/')}
+      unoptimized={src.startsWith('data:')}
       onError={() => setFailed(true)}
     />
   );
@@ -210,14 +203,9 @@ export function Upload({
           const file = e.target.files?.[0];
           if (!file) return;
           setBusy(true);
-          const body = new FormData();
-          body.set('file', file);
-          body.set('type', type);
           try {
-            const r = await fetch('/api/upload', { method: 'POST', body });
-            const d = await r.json();
-            if (!r.ok) throw new Error(d.error);
-            toast.success('File uploaded securely');
+            await uploadDemoFile(file, type);
+            toast.success('Sample file saved in this browser');
             router.refresh();
           } catch (err) {
             toast.error((err as Error).message);
@@ -227,7 +215,7 @@ export function Upload({
           }
         }}
       />
-      <small>PDF, PNG or JPEG · up to 5 MB{type !== 'avatar' ? ' · private' : ''}</small>
+      <small>PDF, PNG or JPEG · up to 1 MB{type !== 'avatar' ? ' · browser only' : ''}</small>
     </label>
   );
 }

@@ -1,5 +1,5 @@
-import { db } from '@/lib/prisma';
-import { Prisma } from '@prisma/client';
+import { demoRepository as db, type Where } from '@/lib/demo/repository';
+import type { Worker } from '@/lib/demo/types';
 export const publicSelect = {
   id: true,
   slug: true,
@@ -18,9 +18,9 @@ export const publicSelect = {
   qualifications: { select: { qualificationName: true, institution: true, yearCompleted: true } },
   availability: { select: { dayOfWeek: true, startTime: true, endTime: true, isAvailable: true } },
   user: { select: { firstName: true, lastName: true, avatarUrl: true } },
-} satisfies Prisma.WorkerProfileSelect;
-export type PublicWorker = Prisma.WorkerProfileGetPayload<{ select: typeof publicSelect }>;
-export const publicWhere: Prisma.WorkerProfileWhereInput = {
+};
+export type PublicWorker = Worker;
+export const publicWhere: Where = {
   verificationStatus: 'APPROVED',
   isListed: true,
   user: { status: 'ACTIVE' },
@@ -40,7 +40,7 @@ export async function searchWorkers(p: SearchParams = {}) {
   const day = value(p, 'day');
   const page = Math.max(1, Math.min(1000, Number(value(p, 'page')) || 1));
   const limit = 6;
-  const where: Prisma.WorkerProfileWhereInput = {
+  const where: Where = {
     ...publicWhere,
     ...(location
       ? {
@@ -77,13 +77,13 @@ export async function searchWorkers(p: SearchParams = {}) {
       : {}),
   };
   const sort = value(p, 'sort');
-  const orderBy: Prisma.WorkerProfileOrderByWithRelationInput[] =
+  const orderBy: Record<string, string>[] =
     sort === 'price-low'
       ? [{ hourlyRate: 'asc' }, { id: 'asc' }]
       : sort === 'price-high'
         ? [{ hourlyRate: 'desc' }, { id: 'asc' }]
         : [{ experienceYears: 'desc' }, { id: 'asc' }];
-  const [workers, total] = await db.$transaction([
+  const [workers, total] = await Promise.all([
     db.workerProfile.findMany({
       where,
       select: publicSelect,

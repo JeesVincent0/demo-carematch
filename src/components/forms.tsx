@@ -2,7 +2,7 @@
 import { useState, useId, Children, isValidElement, cloneElement, type ReactElement } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { signIn } from 'next-auth/react';
+import { signIn } from '@/lib/auth';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -92,7 +92,7 @@ export function LoginForm({ callbackUrl, demo }: { callbackUrl?: string; demo: b
         </Field>
         <div className="row between">
           <span className="small muted row">
-            <LockKeyhole size={13} /> Secure sign-in
+            <LockKeyhole size={13} /> Demo sign-in
           </span>
           <Link href="/forgot-password" className="text-link small">
             Forgot password?
@@ -120,7 +120,14 @@ export function LoginForm({ callbackUrl, demo }: { callbackUrl?: string; demo: b
               ['Professional', 'sarah@carematch.demo'],
               ['Admin', 'admin@carematch.demo'],
             ].map(([name, email]) => (
-              <button type="button" key={name} onClick={() => setValue('email', email)}>
+              <button
+                type="button"
+                key={name}
+                onClick={() => {
+                  setValue('email', email);
+                  setValue('password', 'CareMatch-Demo-2026!');
+                }}
+              >
                 {name}
               </button>
             ))}
@@ -270,13 +277,13 @@ export function PasswordForm({ token }: { token?: string }) {
       ) : (
         <div className="dashboard-note">
           {token
-            ? 'Your password has been updated. Sign in with your new password.'
-            : 'If the account exists, a reset token has been created. This demo does not send email. Local development links appear below.'}
+            ? 'Your demo password has been updated in this browser. Sign in again.'
+            : 'If the account exists, a reset token has been created. This demo does not send email. The browser-only reset link appears below.'}
         </div>
       )}
       {link && (
         <Link href={link} className="text-link">
-          Open local development reset link <ArrowRight size={15} />
+          Open demo reset link <ArrowRight size={15} />
         </Link>
       )}
       <Link href="/login" className="text-link">

@@ -12,7 +12,7 @@ export default async function Login({
       <p className="eyebrow">Good to see you again</p>
       <h1>Welcome back.</h1>
       <p>Sign in to continue your CareMatch journey.</p>
-      <LoginForm callbackUrl={p.callbackUrl} demo={process.env.DEMO_MODE === 'true'} />
+      <LoginForm callbackUrl={p.callbackUrl} demo={true} />
       <div className="auth-bottom">
         New to CareMatch? <Link href="/register">Create an account</Link>
       </div>

@@ -1,11 +1,22 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { subscribeDemo } from '@/lib/demo/store';
+import type { User } from '@/lib/demo/types';
 import Link from 'next/link';
 import { ArrowUpRight, Heart, Mail } from 'lucide-react';
 import { currentUser } from '@/lib/auth';
 import { Logo } from './shared';
 import { MobileMenu } from './interactive';
 import { Button } from './ui/button';
-export async function Header() {
-  const user = await currentUser();
+export function Header() {
+  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
+    const refresh = () => {
+      void currentUser().then(setUser);
+    };
+    refresh();
+    return subscribeDemo(refresh);
+  }, []);
   return (
     <>
       <div className="announcement">
@@ -77,16 +88,16 @@ export function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} CareMatch. A demonstration platform.</span>
-        <span>Fictional profiles · Internal demo reviews · No payments</span>
+        <span>JSON demo · Changes stay in this browser · No payments</span>
       </div>
       <p className="demo-disclaimer">
-        CareMatch is a demonstration platform, not an emergency medical service. No real care is
-        arranged and no external credential checks are performed.
+        CareMatch is a browser-only JSON demonstration, not an emergency medical service. No real
+        care is arranged and no external credential checks are performed.
       </p>
     </footer>
   );
 }
-export async function MarketingLayout({ children }: { children: React.ReactNode }) {
+export function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />

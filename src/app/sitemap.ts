@@ -1,10 +1,10 @@
 import type { MetadataRoute } from 'next';
 import { services } from '@/modules/content';
-import { db } from '@/lib/prisma';
+import { demoRepository as db } from '@/lib/demo/repository';
 import { publicWhere } from '@/modules/queries';
-export const dynamic = 'force-dynamic';
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = process.env.NEXTAUTH_URL || 'http://localhost:3000';
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002';
   const workers = await db.workerProfile.findMany({
     where: publicWhere,
     select: { slug: true, updatedAt: true },

@@ -1,0 +1,4726 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "id": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "firstName": "Alex",
+      "lastName": "Morgan",
+      "email": "admin@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900000",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-01T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "73aa95a5-ebd2-4589-aac7-4a34b5ebed34",
+      "firstName": "Sarah",
+      "lastName": "Mitchell",
+      "email": "sarah@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900001",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-0.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-02T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "099514a4-3dcb-4d03-9a09-4ee2b51f6f03",
+      "firstName": "James",
+      "lastName": "Okafor",
+      "email": "james@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900002",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-1.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-03T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "ad8c9f9a-24b3-41ac-86c6-ecf5dae364e3",
+      "firstName": "Amara",
+      "lastName": "Patel",
+      "email": "amara@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900003",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-2.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-04T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "11452d22-c496-4c87-b153-85eba4257824",
+      "firstName": "Emily",
+      "lastName": "Thompson",
+      "email": "emily@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900004",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-3.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-05T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5d328d7d-6754-41d4-9418-0bec2b7e9cf7",
+      "firstName": "David",
+      "lastName": "Williams",
+      "email": "david@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900005",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-4.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-06T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "70bda395-ec32-4c4d-baff-8f1894705f32",
+      "firstName": "Sophie",
+      "lastName": "Evans",
+      "email": "sophie@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900006",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-0.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-07T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "74fc8c63-ddde-4226-a928-fd81aed166ea",
+      "firstName": "Daniel",
+      "lastName": "Campbell",
+      "email": "daniel@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900007",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-1.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-08T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "e67e21e3-fd84-4c93-9df8-727a00c96228",
+      "firstName": "Aisha",
+      "lastName": "Khan",
+      "email": "aisha@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900008",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-2.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-09T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "d42f26d0-560f-4e5c-8f7b-eebd3dd034e9",
+      "firstName": "Oliver",
+      "lastName": "Bennett",
+      "email": "oliver@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900009",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-3.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-10T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "789b0da8-c4b0-4439-9774-5b728bf4c840",
+      "firstName": "Grace",
+      "lastName": "Wilson",
+      "email": "grace@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900010",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-4.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-11T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "675bd59b-83c1-40a8-ba76-f64dc9a9b1dc",
+      "firstName": "Maya",
+      "lastName": "Shah",
+      "email": "maya@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900011",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-0.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-12T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "00debe57-3ae2-4ed2-98e7-52b6b4484a5d",
+      "firstName": "Thomas",
+      "lastName": "Reed",
+      "email": "thomas@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900012",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-1.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-13T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "aa12bb97-f755-4e5b-a374-618db59456d1",
+      "firstName": "Freya",
+      "lastName": "Davies",
+      "email": "freya@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900013",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-2.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-14T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "1f24462e-06f6-4df5-b187-f604e5d2d213",
+      "firstName": "Noah",
+      "lastName": "Clarke",
+      "email": "noah@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900014",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-3.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-01T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "04891f11-59cd-4235-b5fe-9feca256fae2",
+      "firstName": "Zara",
+      "lastName": "Ahmed",
+      "email": "zara@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900015",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-4.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-02T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "d367fabf-8123-40de-b115-2e5f861b6c74",
+      "firstName": "Isla",
+      "lastName": "MacLeod",
+      "email": "isla@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900016",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-0.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-03T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a11e90f4-a732-4d44-a77b-05232392f05f",
+      "firstName": "Leo",
+      "lastName": "Hughes",
+      "email": "leo@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900017",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-1.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-04T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "afc26ab3-4dad-41d9-aacd-d1b558ca9f92",
+      "firstName": "Ruby",
+      "lastName": "Turner",
+      "email": "ruby@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900018",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-2.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-05T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "aa490322-e741-498f-ba49-fb7849bea16b",
+      "firstName": "Adam",
+      "lastName": "Ali",
+      "email": "adam@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900019",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-3.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-06T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "61f8d9b1-847f-49f8-a117-ae5c79fe028d",
+      "firstName": "Chloe",
+      "lastName": "Walker",
+      "email": "chloe@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900020",
+      "role": "WORKER",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/portrait-4.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-07T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "e1d482df-c64c-488b-9cfe-fa2a3df41480",
+      "firstName": "Olivia",
+      "lastName": "Taylor",
+      "email": "olivia@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900030",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-03T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "efedbd0d-5a7f-4ae9-b169-13c6c270dff0",
+      "firstName": "Harry",
+      "lastName": "Green",
+      "email": "harry@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900031",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-04T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "94d5fd59-e822-4079-9126-904f67c60689",
+      "firstName": "Charlotte",
+      "lastName": "King",
+      "email": "charlotte@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900032",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-05T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "c9a3edc6-3058-4470-8da6-eb61bef281bb",
+      "firstName": "George",
+      "lastName": "Scott",
+      "email": "george@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900033",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-06T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "059cf31e-0f6c-48ac-b4a8-2e8f697e374c",
+      "firstName": "Amelia",
+      "lastName": "Baker",
+      "email": "amelia@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900034",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-07T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "831c306a-aaee-40a2-bfc4-4c3b0c456fc5",
+      "firstName": "Henry",
+      "lastName": "Adams",
+      "email": "henry@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900035",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-11-08T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "39cba4e9-fab9-4e91-b0b9-3d598a1699b5",
+      "firstName": "Ella",
+      "lastName": "Roberts",
+      "email": "ella@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900036",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-09-09T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "abd169bf-8367-4c34-9f1b-e0a8a91832e0",
+      "firstName": "Jack",
+      "lastName": "Lewis",
+      "email": "jack@carematch.demo",
+      "passwordHash": "$2b$10$bQu1kKCb2i0UVX9u7KrLqeSdlEvJC9qbSJDiwOqZnl72lKjwvrw36",
+      "phone": "07700 900037",
+      "role": "CLIENT",
+      "status": "ACTIVE",
+      "avatarUrl": "/images/avatar.svg",
+      "sessionVersion": 0,
+      "createdAt": "2026-10-10T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    }
+  ],
+  "clients": [
+    {
+      "id": "769e0a05-babc-4246-8c34-dc08c755ef32",
+      "userId": "e1d482df-c64c-488b-9cfe-fa2a3df41480",
+      "city": "London",
+      "postcode": "SW1A 1AA",
+      "address": ""
+    },
+    {
+      "id": "2a9a5ff6-488e-465c-b58a-c84c7303b730",
+      "userId": "efedbd0d-5a7f-4ae9-b169-13c6c270dff0",
+      "city": "Manchester",
+      "postcode": "M1 1AE",
+      "address": ""
+    },
+    {
+      "id": "7840891d-15da-42cf-b387-4f3bead248d9",
+      "userId": "94d5fd59-e822-4079-9126-904f67c60689",
+      "city": "Birmingham",
+      "postcode": "B1 1AA",
+      "address": ""
+    },
+    {
+      "id": "a513c583-9961-42fa-8687-4be14a7d54ca",
+      "userId": "c9a3edc6-3058-4470-8da6-eb61bef281bb",
+      "city": "Leeds",
+      "postcode": "LS1 1UR",
+      "address": ""
+    },
+    {
+      "id": "451d5713-d232-43f4-a3b1-527f5843eaf9",
+      "userId": "059cf31e-0f6c-48ac-b4a8-2e8f697e374c",
+      "city": "Bristol",
+      "postcode": "BS1 4ST",
+      "address": ""
+    },
+    {
+      "id": "77593eca-eb07-443c-921e-d1758af087fa",
+      "userId": "831c306a-aaee-40a2-bfc4-4c3b0c456fc5",
+      "city": "Liverpool",
+      "postcode": "L1 8JQ",
+      "address": ""
+    },
+    {
+      "id": "35119009-b2b0-454e-954e-618c7831e4b2",
+      "userId": "39cba4e9-fab9-4e91-b0b9-3d598a1699b5",
+      "city": "Edinburgh",
+      "postcode": "EH1 1YZ",
+      "address": ""
+    },
+    {
+      "id": "1576db2b-101d-4675-ab7d-6eeaad7bb321",
+      "userId": "abd169bf-8367-4c34-9f1b-e0a8a91832e0",
+      "city": "Cardiff",
+      "postcode": "CF10 1EP",
+      "address": ""
+    }
+  ],
+  "workers": [
+    {
+      "id": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "userId": "73aa95a5-ebd2-4589-aac7-4a34b5ebed34",
+      "slug": "sarah-mitchell",
+      "profession": "Nurse",
+      "jobTitle": "Community nurse",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Sarah. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 5 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 5,
+      "hourlyRate": "18.00",
+      "city": "London",
+      "postcode": "SW1A 1AA",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Dementia support"],
+      "registrationNumber": "DEMO-ONLY-10000",
+      "preferredLocation": "London",
+      "liveIn": true,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-02T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "670d9e59-848b-4aa6-84c4-a46e69e5cf13",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "qualificationName": "BSc Adult Nursing (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2014
+        }
+      ],
+      "skills": [
+        {
+          "id": "4bca2f5f-9c1f-4d90-9e6b-85d3aac11b62",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "8170ade8-e0c1-4bc4-a182-0726268901e3",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "0a04c5f0-fff1-4695-9bdc-2af175ea5863",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "623f49f1-3d4e-4fa1-bc9c-601d85935081",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "2f4593d8-0db7-4e64-8053-ba65a43d386e",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "0c983b19-7575-4936-90c0-fec652f8c40f",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "d5ed7905-6df4-44e5-9ab9-56ea153b5e98",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3df4de8c-dd95-45e8-9290-d7bab0e6f707",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "210f631e-57b9-4d49-a3a9-246e7d82347c",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "27fb1570-bec1-4069-bdb1-81db056a0026",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "be5f72b1-eb5e-4c98-867f-38f3c8ed8015",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "6ed53780-7c68-4797-8b0b-9f683aaa4aa8",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "d0ffe8be-6cba-47e0-89aa-3be351f6b4fa",
+          "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "userId": "099514a4-3dcb-4d03-9a09-4ee2b51f6f03",
+      "slug": "james-okafor",
+      "profession": "Home Carer",
+      "jobTitle": "Home Carer",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m James. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 6 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 6,
+      "hourlyRate": "21.00",
+      "city": "Manchester",
+      "postcode": "M1 1AE",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Mobility support"],
+      "registrationNumber": "",
+      "preferredLocation": "Manchester",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-03T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "7f958227-2aa3-4a87-8a38-743d405f1115",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2015
+        }
+      ],
+      "skills": [
+        {
+          "id": "3fa64b96-4e9f-4ddb-b7ce-663aa785655c",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "a2c7a8ab-32e3-4e8d-9bcd-3c75048e5a71",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "c11496c3-2190-492f-abb7-f39f5bfff527",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "c19bbaf4-041b-49be-82bb-56b8f143bd76",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "7355dc58-646f-41c8-b8ee-6210bf28eaab",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "0310f8eb-a91c-4eeb-9e3f-a50703f77c1f",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "89c9f192-7e74-49b4-9d97-0aedb7c57281",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3400eea2-0867-40e6-970b-995b46bb7bbf",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2596ef23-adb0-4f1f-8932-16db152b863d",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2302745b-55da-4b9e-8f37-bc62ca1a9902",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "6af3f9c4-7ab2-4655-a098-1bce42336867",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2bc38d19-3114-4f6a-848f-c3d8297e5e29",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "ce14423e-7f64-4368-9901-54204bcef38a",
+          "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "userId": "ad8c9f9a-24b3-41ac-86c6-ecf5dae364e3",
+      "slug": "amara-patel",
+      "profession": "Elderly Care Specialist",
+      "jobTitle": "Elderly Care Specialist",
+      "introduction": "A warm approach to care, built around the routines and interests that matter to you.",
+      "biography": "Hello, I\u2019m Amara. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 7 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 7,
+      "hourlyRate": "24.00",
+      "city": "Birmingham",
+      "postcode": "B1 1AA",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Recovery support"],
+      "registrationNumber": "",
+      "preferredLocation": "Birmingham",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-09-04T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "985334e7-086d-4c01-ab18-ddc561dcba73",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2016
+        }
+      ],
+      "skills": [
+        {
+          "id": "0367364b-8a51-461d-abc2-44ed7657a026",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "a1d0e080-06cc-4ef1-b2f2-4a38e00e7f2c",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "cb8a78c6-463c-4373-bef1-98730473865b",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "f0920200-0976-47e3-aa95-3fddc7bf3153",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "7a28bee5-f4ad-4f8b-857f-3d825b822657",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "f5a00de2-431d-402e-8591-ef97a75476ba",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "e61e2869-7fea-47cb-8e4b-5b0a06d5527a",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "abc2214b-9d1e-4990-91d2-e2b324c2d1d2",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "d963469b-35bc-4b44-805e-96b885efebb3",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "8d8189f1-f5d8-4c47-a72a-bdd9ac1e2241",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2073b79e-099f-4a64-a8a2-df903946d323",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "89a9232b-6a73-4561-b022-9aab7732a4c2",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "09b7ba33-f117-4ab0-898a-bddcbb9e5137",
+          "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "userId": "11452d22-c496-4c87-b153-85eba4257824",
+      "slug": "emily-thompson",
+      "profession": "Companion Carer",
+      "jobTitle": "Companion Carer",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Emily. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 8 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 8,
+      "hourlyRate": "27.00",
+      "city": "Leeds",
+      "postcode": "LS1 1UR",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Older adult care"],
+      "registrationNumber": "",
+      "preferredLocation": "Leeds",
+      "liveIn": false,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-05T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "a3aee5ce-e060-484f-ae50-a2a291820248",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2017
+        }
+      ],
+      "skills": [
+        {
+          "id": "56b29b6c-842b-4fb4-801f-820e3fba945c",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "30f201c9-a027-418d-b2d5-3e8157830db6",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "695e2006-3793-4730-a421-9e6a4d3caf3f",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "cef0d357-d1f6-4811-b432-62ffdea62774",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "1b192640-23ce-4011-bef4-641b9c2bde56",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "4442573f-b366-4df8-93f1-634e7f14a55e",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "d64b05de-fcab-45f3-adc0-b728d3880d31",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3cd7df3a-ae4b-4125-9e1f-78a47accb29f",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "7cef9de0-a6c2-4e0a-9dac-4d9c635ce1f3",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3039a871-88de-4262-9d3d-8236207d6655",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "20158c9a-ff25-4d08-8473-eb106f998460",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "50abb71e-6030-4415-8f8c-68fecc5afde9",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "3923cb32-9618-498d-a1aa-76c1408d3c14",
+          "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "userId": "5d328d7d-6754-41d4-9418-0bec2b7e9cf7",
+      "slug": "david-williams",
+      "profession": "Healthcare Assistant",
+      "jobTitle": "Healthcare Assistant",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m David. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 9 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 9,
+      "hourlyRate": "30.00",
+      "city": "Bristol",
+      "postcode": "BS1 4ST",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Dementia support"],
+      "registrationNumber": "",
+      "preferredLocation": "Bristol",
+      "liveIn": true,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-06T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "bcde70d0-cc62-4031-8c06-19e07e533c8a",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2018
+        }
+      ],
+      "skills": [
+        {
+          "id": "9f3957ae-5638-41e7-9eb4-33ee46118eb9",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "cc47b361-30ec-4ac4-b9e1-61ede2097d6d",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "c4cfb869-3b62-4aa4-b5db-da0c1af77861",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "06c9e858-bec5-43df-8d16-de4d582ea8a8",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "e2227b71-341e-46e0-acda-56225923c72c",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "3f2fbfe6-d953-4d58-88e5-c0dad96874ba",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "dd3eddb5-a638-49a9-b8a6-9e8b1128272d",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "04f74b89-98c6-4651-a95e-abd470fa9f06",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "5b2e0629-8869-48fe-b5ec-f719d3621df8",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "8fcdee60-7968-4d15-865d-8dca073745b6",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f8d11d97-b9d4-4d31-8e48-c008d909b26d",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "254d6204-231e-4748-a718-1e35cbfea7c2",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "11025c43-5f8c-4ac0-9161-400bc2ae0de3",
+          "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "userId": "70bda395-ec32-4c4d-baff-8f1894705f32",
+      "slug": "sophie-evans",
+      "profession": "Support Worker",
+      "jobTitle": "Support Worker",
+      "introduction": "A warm approach to care, built around the routines and interests that matter to you.",
+      "biography": "Hello, I\u2019m Sophie. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 10 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 10,
+      "hourlyRate": "33.00",
+      "city": "Liverpool",
+      "postcode": "L1 8JQ",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Welsh"],
+      "specialisations": ["Mobility support"],
+      "registrationNumber": "",
+      "preferredLocation": "Liverpool",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-09-07T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "9bb09ee3-9ab0-4ed3-9b3f-4cfb2d865aa8",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2019
+        }
+      ],
+      "skills": [
+        {
+          "id": "0cb48a97-ead2-4eda-81f2-3683b31e009e",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "7a55530a-5e1c-4928-9356-a852dc14fa45",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "a25c725c-eaed-4b4b-af38-9f43d0fcce7f",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "13761673-3729-44db-8845-cc0a7649a64b",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "c8457574-d967-46dd-a0e8-88e85d7f0697",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "17b7face-2b7e-4d51-a902-c28cb412919f",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "d734dc6b-a326-403d-a51d-627104d164a2",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "4705979c-8bf3-49b3-9eaf-39e4cdc01acc",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f8c9d95b-8021-48bb-b22a-01e0d5804443",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "1d5f2b74-e2cd-427f-aae6-6eb6035f45ca",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "1ba72e1f-de42-416a-b4f9-c152703e6f42",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "bcf044f0-0105-464d-8531-f80b2035d31e",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "ac8c9619-249d-45a5-bd9d-4ee41c95b0c7",
+          "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "userId": "74fc8c63-ddde-4226-a928-fd81aed166ea",
+      "slug": "daniel-campbell",
+      "profession": "Doctor",
+      "jobTitle": "General practitioner",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Daniel. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 11 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 11,
+      "hourlyRate": "36.00",
+      "city": "Edinburgh",
+      "postcode": "EH1 1YZ",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Recovery support"],
+      "registrationNumber": "DEMO-ONLY-10006",
+      "preferredLocation": "Edinburgh",
+      "liveIn": false,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-08T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "ca33c97c-489a-4a88-b861-ad1f6e477c8f",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "qualificationName": "MBBS (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2020
+        }
+      ],
+      "skills": [
+        {
+          "id": "89f30f1e-b3af-4036-b50b-92028d8f492c",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "dc1e2385-5479-495c-8579-0b405ae17ea8",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "68cd17b2-6b6a-4534-8e6c-0ba555116f9b",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "52bde9e0-e5a8-4536-b148-e9f1caa59d9e",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "5b8b70d6-ad08-4b7c-a1f1-9c761d48f946",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "1896c3d3-de38-4baa-8c12-6e70d735844f",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "a0f6c637-8df2-42ed-b028-207fc36b5761",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "e06ef685-a4e7-4144-8532-9ad32b63fdd1",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f68cb41c-9dd5-4133-80c3-e8673680483a",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2c5871e1-5156-4744-8048-013c9d178588",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "0525dea2-28a2-4300-a76d-80c13653b23c",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "4afec899-8212-493e-8320-c91903c3bffe",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "8efa5599-19f1-46da-92b2-5f51551834f6",
+          "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "userId": "e67e21e3-fd84-4c93-9df8-727a00c96228",
+      "slug": "aisha-khan",
+      "profession": "Other Care Professional",
+      "jobTitle": "Other Care Professional",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m Aisha. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 12 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 12,
+      "hourlyRate": "39.00",
+      "city": "Cardiff",
+      "postcode": "CF10 1EP",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Older adult care"],
+      "registrationNumber": "",
+      "preferredLocation": "Cardiff",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-09T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "7831d0ad-ab61-4907-bcd4-60de48228259",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2014
+        }
+      ],
+      "skills": [
+        {
+          "id": "b82862a9-74dd-4036-866a-6b97dfb2cb95",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "e6d4c26e-13ca-42e3-85d0-7d4a51a9e1d9",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "73b72c51-ac66-4d16-8c46-9033c004255a",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "f1128de0-4482-4fbc-b8c3-91d213ae8d11",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "67eb8da9-2e22-4181-88d2-95f70916dc67",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "31ec5d90-2f7f-4eaf-8fe4-067073fad01d",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "84e6eb80-37e5-4b63-8521-ba013533b544",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2050dcbf-0ffb-4783-ad70-600c7e7af480",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3e72aba6-574b-4d70-bc19-a65b6abfd888",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f47435ee-6912-416d-9fa5-14ca1e479d82",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "9aeb814d-ad29-4e32-a098-2235dc3e832b",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "26904814-0b14-4be9-9d7f-0bf07a167ed7",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "63d8b9d9-670f-4bf3-b758-ed088edb3d1e",
+          "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "userId": "d42f26d0-560f-4e5c-8f7b-eebd3dd034e9",
+      "slug": "oliver-bennett",
+      "profession": "Nurse",
+      "jobTitle": "Community nurse",
+      "introduction": "A warm approach to care, built around the routines and interests that matter to you.",
+      "biography": "Hello, I\u2019m Oliver. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 13 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 13,
+      "hourlyRate": "42.00",
+      "city": "London",
+      "postcode": "SW1A 1AA",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Dementia support"],
+      "registrationNumber": "DEMO-ONLY-10008",
+      "preferredLocation": "London",
+      "liveIn": true,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-09-10T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "7bbe7bbe-2e5a-4416-85d4-1d462d4113a1",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "qualificationName": "BSc Adult Nursing (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2015
+        }
+      ],
+      "skills": [
+        {
+          "id": "2a98d52c-c8f5-40cf-a626-e55158f4a1ac",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "9fa06340-5ca7-403f-891e-6c85f5798bd2",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "abfc1519-eec0-4aca-8879-3570ce069b43",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "3194310b-9285-42d4-9f28-6577bada3de6",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "2f081eb7-28bc-471c-a5bc-a6d1d6dc54bb",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "87ce9f44-b927-4497-bc93-31438e3984d9",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "2b064504-94b8-4f16-bcdb-6b54d31be958",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "c9b79222-5f38-422d-8ec5-9ba10470c0f6",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "150c28af-6529-48a1-9c45-6b557905d737",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "eb871ced-ceca-49a8-b133-a50296e3896a",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "96e55c9a-53c9-491f-9b9e-257467643a2b",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f03797f3-524a-4772-8ddb-f87207226081",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "730bf208-942c-4fb7-b138-67935a0bd0d2",
+          "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+      "userId": "789b0da8-c4b0-4439-9774-5b728bf4c840",
+      "slug": "grace-wilson",
+      "profession": "Home Carer",
+      "jobTitle": "Home Carer",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Grace. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 14 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 14,
+      "hourlyRate": "20.00",
+      "city": "Manchester",
+      "postcode": "M1 1AE",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Mobility support"],
+      "registrationNumber": "",
+      "preferredLocation": "Manchester",
+      "liveIn": false,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "APPROVED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-11T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "98f8e929-eab2-4468-a57c-bff70cdebb60",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2016
+        }
+      ],
+      "skills": [
+        {
+          "id": "55c9dc6e-18db-4df7-9818-afbbf9047e4b",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "6503d5f2-8529-4011-9e78-1aa4fbbf7f25",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "0100ff2a-5347-496c-95ae-52ccacc8c9a4",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "50b77b3b-4870-4b68-83f5-03b6f6d16df5",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "18fb6316-c9c2-4a5e-bf0c-09cdb3215a70",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "48313a94-7728-4eab-ad11-430d8faefae8",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "abe07e78-c9ff-4cb8-82e3-04039009a2cf",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "fed50552-1afc-4a53-acb2-571b96d5b786",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "c1ae0adc-dec0-45a9-9bd7-b0466dd72dd6",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2d3f752d-13cb-4d39-a442-5d07a0543ab1",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "0c3c8310-ab95-4b0f-ac8f-d5e1b31110a5",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "5e12ff70-2e46-4e08-989c-35c9ddbfbeb8",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "4cb56b87-cc24-4a08-828e-fc60e2762cf8",
+          "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "90c8b592-d9d8-4677-afe4-666930204d31",
+      "userId": "675bd59b-83c1-40a8-ba76-f64dc9a9b1dc",
+      "slug": "maya-shah",
+      "profession": "Elderly Care Specialist",
+      "jobTitle": "Elderly Care Specialist",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m Maya. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 15 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 15,
+      "hourlyRate": "23.00",
+      "city": "Birmingham",
+      "postcode": "B1 1AA",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Welsh"],
+      "specialisations": ["Recovery support"],
+      "registrationNumber": "",
+      "preferredLocation": "Birmingham",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "PENDING",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-12T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "7d710df2-d1cb-420c-964b-f8a7f824aa93",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2017
+        }
+      ],
+      "skills": [
+        {
+          "id": "8a936b46-c8b8-479b-a004-e314bfa7fc8d",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "5d9283f9-910d-4054-a37c-d6488ec93b1b",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "e7571048-bd2a-4294-ab7a-bf0763c3af46",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "c7679a32-c15e-4ff8-b878-7276e0743256",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "abdd25a1-9088-45a9-b6b9-d898b631d81d",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "dc0b0d29-8f7e-4232-a942-91077024ab28",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "6cccc1c2-678d-4db0-a6e3-ec80e66a2e76",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "42739e3e-5a74-457b-b6ea-f03174fa0e17",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "4a4c6270-261f-452f-abbf-4ac3e1be9dad",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "96b5fcae-3cef-49f7-9436-01532d82104f",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "652ab0f3-81e5-4de0-ba9b-314def2ee4fc",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f9c447a9-3af7-4594-95c4-7bf39e415677",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "77a4e3ec-730d-4143-8c45-eedb310558e9",
+          "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+      "userId": "00debe57-3ae2-4ed2-98e7-52b6b4484a5d",
+      "slug": "thomas-reed",
+      "profession": "Companion Carer",
+      "jobTitle": "Companion Carer",
+      "introduction": "A warm approach to care, built around the routines and interests that matter to you.",
+      "biography": "Hello, I\u2019m Thomas. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 16 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 16,
+      "hourlyRate": "26.00",
+      "city": "Leeds",
+      "postcode": "LS1 1UR",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Older adult care"],
+      "registrationNumber": "",
+      "preferredLocation": "Leeds",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "PENDING",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-09-13T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "bd0f6ea5-1dc8-4f2b-a6ea-988891d23ae2",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2018
+        }
+      ],
+      "skills": [
+        {
+          "id": "2501a7b9-bdba-4844-8f11-46af1a31540c",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "23b1473b-78cc-4d40-b65c-d0e9f874d889",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "64fb6c25-8069-40a4-a68b-bb4787a370d9",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "a2bdd818-dc62-4ef8-bafa-dcb4a42b4208",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "122d00ce-4651-4dc5-aa8e-9f1cbe891092",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "2e9c8f95-d9c2-4293-8355-f9217cb7cf03",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "28f07d40-3fc3-4723-8046-da7e8c435af6",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "182b8430-431e-4075-9f63-4de78c516548",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "02eb77ed-c441-4f32-9763-22b49847d3c0",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "d6b0237e-380c-43c7-9928-871c9938a102",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "7433487c-02b0-4234-8033-4e5587b32b1f",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "73007311-1044-4f8d-a644-5b60319ab4a4",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "f93036cc-51c3-421e-a53b-4b841059bb62",
+          "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "userId": "aa12bb97-f755-4e5b-a374-618db59456d1",
+      "slug": "freya-davies",
+      "profession": "Healthcare Assistant",
+      "jobTitle": "Healthcare Assistant",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Freya. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 5 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 5,
+      "hourlyRate": "29.00",
+      "city": "Bristol",
+      "postcode": "BS1 4ST",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Dementia support"],
+      "registrationNumber": "",
+      "preferredLocation": "Bristol",
+      "liveIn": true,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "PENDING",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-14T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "a3065646-c353-4209-bbf9-d77b6bc3427f",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2019
+        }
+      ],
+      "skills": [
+        {
+          "id": "83dc1305-36b7-4301-bac0-63235a867a07",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "61618b83-b164-42d4-a7be-43db7f0a5abd",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "e32bcea9-e140-4cf8-b6ba-bf6e7b126086",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "95794bce-5ca0-465c-b44d-500f2878c2cf",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "52463234-3c77-4ffd-bbe9-f12be1880916",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "eb57d90a-ea3b-4556-bfe0-acc979f04ddb",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "405fd977-5c0f-4c85-8e25-b75589a7ed5f",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "21972144-7de7-48b9-92dd-60de7a6e35a9",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "11d3ad90-4d65-4b15-ae44-7e66efd72832",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "4b6aec8d-7211-41af-baef-821880f36858",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "d1116d82-4968-487a-9f16-a74149de85dc",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "4576d141-dccf-48c7-98eb-e08a1b2b5f89",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3c7ea778-3d31-4a07-846e-843fa857e3d2",
+          "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+      "userId": "1f24462e-06f6-4df5-b187-f604e5d2d213",
+      "slug": "noah-clarke",
+      "profession": "Support Worker",
+      "jobTitle": "Support Worker",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m Noah. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 6 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 6,
+      "hourlyRate": "32.00",
+      "city": "Liverpool",
+      "postcode": "L1 8JQ",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Mobility support"],
+      "registrationNumber": "",
+      "preferredLocation": "Liverpool",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "PENDING",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-01T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "0c565be4-9c45-4e21-bdb4-2e90d2fcb759",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2020
+        }
+      ],
+      "skills": [
+        {
+          "id": "30fd6e4b-e4f5-4074-9666-c7a82bdfada4",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "fcb851fb-308c-4409-bdab-cff0647d8770",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "c178db00-0783-451f-bd17-0cc20d5dd5d0",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "91d7bfbb-546d-4af8-b6c6-a226aa9729cb",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "3590971c-56ad-40e5-b0ce-c763e4ad65a6",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "07ee1396-6df3-45fa-833d-57f21c7dba30",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "9f2283d3-1926-4037-9116-9e5838957c7c",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "dd54204a-5a1c-4d7d-b42f-61f82fc05cf5",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "d6eefe8a-eec8-40a7-a64e-e963a627e690",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f808afb8-7db4-4e37-a57b-092923842771",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3db2d9fb-6b54-48f1-b49a-a5d4fdb68216",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "07e61d3c-49c7-4ebe-bda9-128deece94a1",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "026f99c8-9e29-4af2-89c6-bb214793a14d",
+          "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "userId": "04891f11-59cd-4235-b5fe-9feca256fae2",
+      "slug": "zara-ahmed",
+      "profession": "Doctor",
+      "jobTitle": "General practitioner",
+      "introduction": "A warm approach to care, built around the routines and interests that matter to you.",
+      "biography": "Hello, I\u2019m Zara. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 7 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 7,
+      "hourlyRate": "35.00",
+      "city": "Edinburgh",
+      "postcode": "EH1 1YZ",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Recovery support"],
+      "registrationNumber": "DEMO-ONLY-10014",
+      "preferredLocation": "Edinburgh",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "PENDING",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-09-02T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "48f032cd-c9fa-457b-8a9f-efe36719df03",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "qualificationName": "MBBS (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2014
+        }
+      ],
+      "skills": [
+        {
+          "id": "12d90a00-bf3c-4aaa-ad2e-6e7f40a67a9f",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "3f85e7cf-ca33-47a6-9481-1544949b27aa",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "fced3844-6bd4-43fc-9570-b59506568401",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "5f2cca9f-68f5-4972-b319-68c8d740f619",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "c861e45a-5cf6-423b-abc6-5636415cef56",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "f023c662-d958-4cb0-9c30-9e071e59544a",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "5f925888-ae45-4e09-a42c-ae8d89b2e441",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "97d401a8-6b92-4982-8649-dfd7bb45293c",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "5271bb8c-1aff-4066-bc68-46dbb17c1583",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "f6184d3b-f5ec-4bc4-b61c-3b0d80f17f9c",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "d31a3197-11b3-44fc-aea2-46e5dff598d8",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "8d859ded-d4d3-451f-ba62-0a85c9d18c18",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "01d5bcb7-5ad8-41b6-8276-0a1fd80798b8",
+          "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+      "userId": "d367fabf-8123-40de-b115-2e5f861b6c74",
+      "slug": "isla-macleod",
+      "profession": "Other Care Professional",
+      "jobTitle": "Other Care Professional",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Isla. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 8 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 8,
+      "hourlyRate": "38.00",
+      "city": "Cardiff",
+      "postcode": "CF10 1EP",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Older adult care"],
+      "registrationNumber": "",
+      "preferredLocation": "Cardiff",
+      "liveIn": false,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "UNDER_REVIEW",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-03T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "939a2895-fd4a-4658-88dc-b4ff68eb6b41",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2015
+        }
+      ],
+      "skills": [
+        {
+          "id": "d8b9f91e-050b-492e-ab38-7e989c7c903a",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "d79a3f6e-0a69-406b-9328-db2ab56ec561",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "32ace069-a39f-4ab7-a41d-438ad9fa36e9",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "1bc698bc-3320-49cc-9eca-9e8193db218e",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "4c0d1487-0231-4ca9-8519-e44b6ff11495",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "7ddb8478-acdb-423a-b29e-dba493854f58",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "a86d99dc-d8e9-44fc-88b2-754bea0a20c8",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "05130c71-b301-4f6e-b8b9-d23b5e71b687",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "38ae29e7-9ee4-479f-948c-464341199ce6",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "a88be0b8-4dbe-4b91-a842-508bb3cdf368",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "83d5b109-9abd-445a-a94c-dcd079f8254b",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "976438a8-1577-4ec9-81c8-d0acfbd10437",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "371bfc56-2e57-4859-aa33-1bcbc81f6b45",
+          "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "userId": "a11e90f4-a732-4d44-a77b-05232392f05f",
+      "slug": "leo-hughes",
+      "profession": "Nurse",
+      "jobTitle": "Community nurse",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m Leo. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 9 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 9,
+      "hourlyRate": "41.00",
+      "city": "London",
+      "postcode": "SW1A 1AA",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Dementia support"],
+      "registrationNumber": "DEMO-ONLY-10016",
+      "preferredLocation": "London",
+      "liveIn": true,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "UNDER_REVIEW",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-04T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "8656347d-5592-4095-8063-99abbcabbc42",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "qualificationName": "BSc Adult Nursing (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2016
+        }
+      ],
+      "skills": [
+        {
+          "id": "088cec48-441c-4ea4-9671-fe23dd583c5b",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "bf8963ef-ee36-4477-9886-33b4ee9fe2e2",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "3480b038-62ce-4d4f-b9d1-7e4479a47a10",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "033bac8f-6c09-4f28-b238-d945862f046d",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "fd62cdce-65d5-497e-beae-f9614a1470c4",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "374a0bdf-3d63-46ce-9879-8fcc3bd3659b",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "d32fc185-7b12-4058-9337-56a3a4545124",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "0ac1d788-dd46-4470-b293-7cad4e6db60b",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "bf2ae23f-7559-481c-9fef-003e2e00e9a4",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "555834a3-73c9-4a51-8381-6e2a68e5aa65",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "8c144172-1ee0-46c6-b916-5aee9ab5c79e",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "6fc109c9-864a-47cf-bbad-9a041d66c129",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "a73c8ee7-732d-4950-9183-4acc41263b68",
+          "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "2abda1e2-4105-44c4-b115-214bed449bb5",
+      "userId": "afc26ab3-4dad-41d9-aacd-d1b558ca9f92",
+      "slug": "ruby-turner",
+      "profession": "Home Carer",
+      "jobTitle": "Home Carer",
+      "introduction": "A warm approach to care, built around the routines and interests that matter to you.",
+      "biography": "Hello, I\u2019m Ruby. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 10 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 10,
+      "hourlyRate": "19.00",
+      "city": "Manchester",
+      "postcode": "M1 1AE",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Mobility support"],
+      "registrationNumber": "",
+      "preferredLocation": "Manchester",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "REJECTED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-09-05T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "82043c94-0b69-48b8-b39c-8ee1702e9bbc",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2017
+        }
+      ],
+      "skills": [
+        {
+          "id": "4a0cd99f-06b4-4872-83d4-1ffe4cedd98d",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "9adf0cad-a070-4976-9983-b45bf93b57f4",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "d1070e59-7810-46e4-bbd9-b8262c0fd297",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "2200daca-2cdb-4990-8f89-5daa0bc13483",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "23bb2c92-77c8-4bfe-b3c0-9ac8008e792e",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "22092015-90f0-4899-83de-be86ad2a6005",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "ff0fbc07-28dd-4fb5-b08b-3e007a236ec9",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "8cd28a2c-b136-493b-a581-319c495b177f",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "ecba0947-d5a2-4c25-b20a-037e71df2a11",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "fde4f726-0e11-49a8-868b-36b6c8190c0e",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "3df7fb15-9197-40a9-a1f7-e1ec60dadf73",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "ad2e7572-93dc-4a8b-aeb3-1417b73df5e2",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "82c38a4d-a454-4bfc-afd9-f902f5188774",
+          "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+      "userId": "aa490322-e741-498f-ba49-fb7849bea16b",
+      "slug": "adam-ali",
+      "profession": "Elderly Care Specialist",
+      "jobTitle": "Elderly Care Specialist",
+      "introduction": "A calm, friendly presence with a passion for making everyday life a little easier.",
+      "biography": "Hello, I\u2019m Adam. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 11 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 11,
+      "hourlyRate": "22.00",
+      "city": "Birmingham",
+      "postcode": "B1 1AA",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English", "Hindi"],
+      "specialisations": ["Recovery support"],
+      "registrationNumber": "",
+      "preferredLocation": "Birmingham",
+      "liveIn": false,
+      "overnight": true,
+      "isListed": true,
+      "verificationStatus": "REJECTED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-10-06T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "9c7decfe-2451-4319-9736-cea021759bd0",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2018
+        }
+      ],
+      "skills": [
+        {
+          "id": "bc03ab44-1803-4e05-b9db-062d0b0bd36b",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "skillName": "Dementia support"
+        },
+        {
+          "id": "12e284b5-ba00-4721-bd77-3ed7a062447c",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "skillName": "Mobility support"
+        }
+      ],
+      "services": [
+        {
+          "id": "5952f3ea-474b-46d1-a515-b38e5c5fbf03",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "ff4dbc3a-8788-42e3-8654-25f415c15789",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "b3b5c0e4-60db-400f-9ac4-45e947e49ffb",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "serviceType": "Elderly Care"
+        },
+        {
+          "id": "44b18e72-61b1-4681-9c0f-a6bbe30df938",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "serviceType": "Overnight Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "f969be36-45e1-4124-8be6-5d8f65cd056f",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "7bfb2f00-0e80-4ae3-ab15-8e88e79d43dc",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "20d9671b-5a96-4b28-a690-19c0f59d2894",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "01edc092-8061-4a42-8d4b-67a1f5fbeba4",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "24f249f1-f223-468a-8e45-d8cbc80dceb6",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "bd8c17a7-722a-40ec-9ee9-5395f9ec2b92",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "bc7b0f34-8778-4fdf-acc5-dd7cfd80f062",
+          "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+      "userId": "61f8d9b1-847f-49f8-a117-ae5c79fe028d",
+      "slug": "chloe-walker",
+      "profession": "Companion Carer",
+      "jobTitle": "Companion Carer",
+      "introduction": "Thoughtful, person-centred support that puts your independence and comfort first.",
+      "biography": "Hello, I\u2019m Chloe. I believe good care begins with listening. I take time to understand the little things that make each day feel comfortable, familiar and enjoyable.\n\nI bring 12 years of fictional experience supporting adults and families, with a particular interest in maintaining independence and building a reassuring routine. Outside work, I enjoy gardening, cooking and walks in the countryside.\n\nThis is a fictional CareMatch demo profile. All experience and qualifications are illustrative.",
+      "experienceYears": 12,
+      "hourlyRate": "25.00",
+      "city": "Leeds",
+      "postcode": "LS1 1UR",
+      "address": "Fictional demo address only",
+      "dateOfBirth": "1988-05-15",
+      "travelRadius": 10,
+      "languages": ["English"],
+      "specialisations": ["Older adult care"],
+      "registrationNumber": "",
+      "preferredLocation": "Leeds",
+      "liveIn": false,
+      "overnight": false,
+      "isListed": true,
+      "verificationStatus": "REJECTED",
+      "onboardingStep": 5,
+      "submittedAt": "2026-11-15T09:00:00.000Z",
+      "createdAt": "2026-11-07T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z",
+      "qualifications": [
+        {
+          "id": "501ef050-13af-4cb8-88a8-22e7bcfb8d3f",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "qualificationName": "Level 3 Diploma in Adult Care (fictional)",
+          "institution": "Demo College of Care",
+          "yearCompleted": 2019
+        }
+      ],
+      "skills": [
+        {
+          "id": "64508427-03f0-4d2f-b5f6-7841902fe875",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "skillName": "Personal care"
+        },
+        {
+          "id": "0d83dba9-2fbc-4053-a0f5-5374559d822b",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "skillName": "Companionship"
+        }
+      ],
+      "services": [
+        {
+          "id": "474360af-3ca4-4635-9d54-8dba56ef224a",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "serviceType": "Hourly Care"
+        },
+        {
+          "id": "2da11df3-adba-4832-b5a5-d1bbd3f7d037",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "serviceType": "Companionship"
+        },
+        {
+          "id": "fcadf938-dd26-4782-a85e-1cb7ffda0e5c",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "serviceType": "Personal Care"
+        },
+        {
+          "id": "e9e096b5-3ddf-409c-99df-985baee04616",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "serviceType": "Respite Care"
+        }
+      ],
+      "availability": [
+        {
+          "id": "d8d0e663-54ce-4cc1-a986-e065a4a06eee",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "4acfd232-14c1-473b-8e66-dc53005f0fca",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "bb95db99-2586-40d6-a3fa-1e84f1ceb57f",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "48c9ed4e-d584-46e8-acce-31d1e793e10f",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "2c68f9eb-147a-46ee-83a9-5a2abd804d78",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": true
+        },
+        {
+          "id": "31da3efa-c6b0-42eb-8bbf-0859dd59af0f",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        },
+        {
+          "id": "de09fb42-d25d-4b58-94d7-85a6a2b17959",
+          "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "17:00",
+          "isAvailable": false
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "100f112c-d7e5-4230-8435-dd0acfb584a7",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "e1db3bc2-854b-472b-8193-2eca75043126",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "18c66b5b-ed36-4b3e-a4da-c46bd3b782d4",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "b153b420-88da-4bc9-8dba-bf93db0ce9f4",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "a46621ad-80f3-41c5-abf6-1728b09035ba",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "62563885-c6e9-4948-8f84-2ebd596e0d0d",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "d382fccb-d0dc-4c66-bb27-b5bf42a01f06",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "4411d2c0-6c26-43e1-b68b-3590165d0caa",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "64170b2a-fd11-49ff-907f-d8d5ee5c8c3e",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "a3a9070c-0eb2-49f2-a3c7-40cb6d2a505e",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "9dd81981-33c1-4c95-836b-f5d64a56f941",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "852b2ec3-3f4e-4fa5-9a88-9d3a5b4bd26f",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "71a08480-cd43-426f-b858-35ca4b0211d2",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "92431656-2ca1-406f-aa7e-3f1db4e579bf",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "8acdc924-9db9-4e36-bb9f-78fcf359725c",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "54fa6981-6f1a-4c85-ad82-4e3ed66bc765",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "718933f1-83e3-40b0-b69d-ca2ac48b355f",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "fc45ad62-fbf9-4fb2-96b4-967a906559a6",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "fdaf11f8-274e-45b5-b663-77827aa33ec7",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "e0797c9c-bece-442e-a4f2-e3c05297415f",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "9a34ee7a-9935-4bae-a455-ddbf1c803703",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "a6ce3989-3a65-442a-b003-21a0df6d407a",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "267a0df8-c5de-4f5e-a612-61efabac4edc",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "54ea78d3-3157-43de-834e-65a7334d1093",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "7082bd4a-636d-4eb6-8657-58f973460568",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "b37f3314-e1e1-440b-95eb-6b0e33dda5a2",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "507fca6a-1d97-4363-823d-8b173b198efa",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "9e08071a-1ae2-4ff5-a180-f1c7ae5369d5",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "f3a44563-69c5-43c5-95d1-f8859c70d376",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "0932137f-2807-4c9b-a754-fe84e5aeb49e",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "9dca1ecb-0a2c-47dc-876d-78da980f53b1",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "f6334818-4727-4ebc-a443-68cd3680a816",
+      "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "d3c05656-f583-4b84-9092-20de2c3949e2",
+      "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "e82b149e-5218-4f1f-bd0b-2b1467c2581a",
+      "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "REVIEWED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "9088998e-d01b-42ed-bf0b-66de5551a795",
+      "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "ae694042-4bbf-48dd-bc01-08048541092d",
+      "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "eae9e1a7-26c9-42d9-8092-5d708a48736d",
+      "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "e66589e7-2449-4435-a245-1055ffb7eed6",
+      "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "54552118-a749-419d-964e-e8e1a04abbca",
+      "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "b97570ef-5d13-4cb0-8746-9cf34c092995",
+      "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "30ea1864-153f-4cd8-b16f-dcbb56c7a96c",
+      "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "c78b3f16-46e1-4749-a204-d722cd0c810c",
+      "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "8788be88-a813-4527-a0b3-25219b0095b6",
+      "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "ef888b0e-efd4-4ffd-973a-d53f07c9abe0",
+      "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "bb43935e-28f3-4681-8ebc-db7d92f2421b",
+      "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "46e9d269-ffa5-46bb-b58b-f816bad12e39",
+      "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "c54fc28a-4660-4dad-b198-5d0519fdff20",
+      "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "82cf0522-ce9e-4fba-82c9-894927b744ed",
+      "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "794a8141-2df8-4918-a0a4-bf3e7e7d49db",
+      "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "31427d07-c3b3-49a5-a287-066db7afccb7",
+      "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "26d40cd0-d964-4307-9bf5-c977b936f7b6",
+      "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "aa7f8374-0daa-4e93-a142-b4313eb0d4d7",
+      "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "6e4dab33-df0c-4516-94c6-c76dd547ed36",
+      "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "b35b1bef-cb74-40b6-8ac9-d9ad8ed1aabb",
+      "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "f7db9cc5-dffa-461b-bc79-87aa7856384f",
+      "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "1b8d5421-346a-49c5-9b70-40df31ec2855",
+      "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "03f4fc24-ef10-411d-a6e1-0a68d8361aff",
+      "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "a262e6cf-8d8c-4ef8-b51b-89ebda599555",
+      "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "documentType": "Qualification evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "62e85d55-5f56-4145-b306-fbd2bc8dcdf6",
+      "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "e085c1ef-16be-4a71-857f-64da70fa7bb3",
+      "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "2edbb8c3-d602-4451-a786-38b873ee4e4c",
+      "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "b695425f-079d-4894-8592-d62fcbf9e60d",
+      "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "bb91247f-839e-4a41-961d-1038e3a23e49",
+      "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "8c9c48fc-72e5-4b00-a6f1-a8419a08feef",
+      "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "acd9a460-77a7-46a2-ab80-babf66b10b50",
+      "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+      "documentType": "Identity document",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "b5227e4e-c359-4938-833e-e95f0691ab66",
+      "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+      "documentType": "Right-to-work evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    },
+    {
+      "id": "f12d7927-5e9e-47c8-8fa5-b2ec4f37810c",
+      "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+      "documentType": "Criminal-record-check evidence",
+      "originalFileName": "SAMPLE-EVIDENCE.pdf",
+      "mimeType": "application/pdf",
+      "reviewStatus": "UPLOADED",
+      "uploadedAt": "2026-11-15T09:00:00.000Z",
+      "dataUrl": "/demo/sample-evidence.pdf"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "b8f08e2c-be56-468f-9ca9-6ebb12571d84",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "802613dd-8824-4b30-a678-76848e93288a",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "11b334fd-1648-4006-be6f-97e055784992",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "0746ca78-6bfc-4fb3-8499-ddbcef084c8c",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "3b916b9c-1c1e-4dd7-955e-2a9ba4e5b685",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "817e1711-efc7-45a6-97dd-9e9db7cfc06b",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "f43b6856-c0ca-42bc-a89d-ba586467db48",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "86bedf4c-9773-43b7-befa-f54d235bb9d9",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5b3fabe6-8809-482a-b9a5-f590a9597c0a",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "529ba845-5592-4d29-b510-a743c1fb5377",
+      "workerId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "UNDER_REVIEW",
+      "newStatus": "APPROVED",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "1cbab963-ea7a-4575-b75f-b35d40e97395",
+      "workerId": "90c8b592-d9d8-4677-afe4-666930204d31",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "PENDING",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "41a0d42f-0410-49fc-b53f-47febe2e3094",
+      "workerId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "PENDING",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "2d182e22-d9c1-4ec7-8a80-a09285bba8e9",
+      "workerId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "PENDING",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "94ec0bee-9b78-4d5d-97c6-559c9fe48115",
+      "workerId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "PENDING",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "1db4b2cb-075a-4214-996b-d27cb2748d68",
+      "workerId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "PENDING",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "3ec74132-9a40-4562-b0e9-171e2e5c40d9",
+      "workerId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "UNDER_REVIEW",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5bbc1833-8270-4276-a711-d263aff5d455",
+      "workerId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "UNDER_REVIEW",
+      "notes": "Internal demo review only. No authoritative register check was performed.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "0374a271-e16a-49c1-a530-30227ea0c13c",
+      "workerId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "REJECTED",
+      "notes": "Please replace the incomplete sample qualification evidence and resubmit.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a8854373-c47e-4abf-8584-664b17dcbe75",
+      "workerId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "REJECTED",
+      "notes": "Please replace the incomplete sample qualification evidence and resubmit.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "68616be8-d76a-4fbd-8475-06b77b97c1aa",
+      "workerId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+      "reviewedBy": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "previousStatus": "DRAFT",
+      "newStatus": "REJECTED",
+      "notes": "Please replace the incomplete sample qualification evidence and resubmit.",
+      "reviewedAt": "2026-11-15T09:00:00.000Z"
+    }
+  ],
+  "requests": [
+    {
+      "id": "6029fee7-dff6-4957-a5ce-944d2eff10af",
+      "clientId": "769e0a05-babc-4246-8c34-dc08c755ef32",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-05T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "London",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "c91a7bd4-b032-4806-8e0f-641a7ad84efd",
+      "clientId": "769e0a05-babc-4246-8c34-dc08c755ef32",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-06T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "London",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "ACCEPTED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "7cf7c610-7934-467a-b4f4-bd0abbfa86d3",
+      "clientId": "2a9a5ff6-488e-465c-b58a-c84c7303b730",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-06T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Manchester",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "8810dc44-8d3c-48aa-a960-e23c162da3af",
+      "clientId": "2a9a5ff6-488e-465c-b58a-c84c7303b730",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-07T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Manchester",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "COMPLETED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "d8e24762-77bc-4c58-a365-e81ba4e8ce9e",
+      "clientId": "7840891d-15da-42cf-b387-4f3bead248d9",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-07T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Birmingham",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "1b37de88-3244-474c-b7b9-5ef9d9976ca3",
+      "clientId": "7840891d-15da-42cf-b387-4f3bead248d9",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-08T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Birmingham",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "DECLINED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "76fa0a21-7641-4170-8f58-75355be0717e",
+      "clientId": "a513c583-9961-42fa-8687-4be14a7d54ca",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-08T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Leeds",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "611e34d8-55b1-476e-ba00-40f1c27ac2c0",
+      "clientId": "a513c583-9961-42fa-8687-4be14a7d54ca",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-09T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Leeds",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "ACCEPTED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5c23efd3-64ad-4158-81b4-295e4116811b",
+      "clientId": "451d5713-d232-43f4-a3b1-527f5843eaf9",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-09T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Bristol",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "dfd1ca03-ff2a-4a53-b551-543f575e3d6f",
+      "clientId": "451d5713-d232-43f4-a3b1-527f5843eaf9",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-10T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Bristol",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "COMPLETED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "13bd13f5-9da1-4ecd-86f7-2a3804f571ce",
+      "clientId": "77593eca-eb07-443c-921e-d1758af087fa",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-10T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Liverpool",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "8ba01dd1-1913-4d87-9eea-6071ddbd9d05",
+      "clientId": "77593eca-eb07-443c-921e-d1758af087fa",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-11T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Liverpool",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "DECLINED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "37357369-5ee1-415c-a974-529701054da7",
+      "clientId": "35119009-b2b0-454e-954e-618c7831e4b2",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-11T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Edinburgh",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "59c78ecb-d8e8-4b6c-a670-cdbb33201a99",
+      "clientId": "35119009-b2b0-454e-954e-618c7831e4b2",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-12T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Edinburgh",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "ACCEPTED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "d6bf4624-0bfb-4026-abe2-e6dc800fc87c",
+      "clientId": "1576db2b-101d-4675-ab7d-6eeaad7bb321",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-12T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Cardiff",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "PENDING",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "88f27fba-ddec-4580-817f-f9407c3acf2d",
+      "clientId": "1576db2b-101d-4675-ab7d-6eeaad7bb321",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "careType": "Companionship",
+      "requestedDate": "2026-12-13T12:00:00.000Z",
+      "startTime": "10:00",
+      "durationHours": 2,
+      "generalLocation": "Cardiff",
+      "description": "A fictional visit for conversation over tea and help with everyday routines.",
+      "notes": "",
+      "status": "COMPLETED",
+      "createdAt": "2026-11-15T09:00:00.000Z",
+      "updatedAt": "2026-11-15T09:00:00.000Z"
+    }
+  ],
+  "favourites": [
+    {
+      "id": "6828dd47-16a3-489d-af2b-7313960801e9",
+      "clientId": "769e0a05-babc-4246-8c34-dc08c755ef32",
+      "workerId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "6dc11e0b-e58c-4212-a902-06a882d3a52a",
+      "clientId": "769e0a05-babc-4246-8c34-dc08c755ef32",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "f2fb436b-9a45-4fad-b097-113a417139bb",
+      "clientId": "2a9a5ff6-488e-465c-b58a-c84c7303b730",
+      "workerId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "083db4e6-4096-4d3d-8932-8a421e08d405",
+      "clientId": "2a9a5ff6-488e-465c-b58a-c84c7303b730",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "89c91bd5-2767-4b00-927e-3c4841534d55",
+      "clientId": "7840891d-15da-42cf-b387-4f3bead248d9",
+      "workerId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a76f1a4a-c18a-4ff6-bb73-67e6b1fcb6b0",
+      "clientId": "7840891d-15da-42cf-b387-4f3bead248d9",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5aeb20fa-2d1f-4d0f-a7fd-c2ed07f9f175",
+      "clientId": "a513c583-9961-42fa-8687-4be14a7d54ca",
+      "workerId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "ea9ef053-5264-4949-9640-6c607be3980b",
+      "clientId": "a513c583-9961-42fa-8687-4be14a7d54ca",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "ef5f3e79-1830-4971-a8e3-2a9cbd83a5e2",
+      "clientId": "451d5713-d232-43f4-a3b1-527f5843eaf9",
+      "workerId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "e97825b3-7be3-4a69-a2ae-2c19623cd5ba",
+      "clientId": "451d5713-d232-43f4-a3b1-527f5843eaf9",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "55792873-e985-4229-a607-e43bd32bb58a",
+      "clientId": "77593eca-eb07-443c-921e-d1758af087fa",
+      "workerId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "203c6f15-047b-4945-a817-b5ea217c1be7",
+      "clientId": "77593eca-eb07-443c-921e-d1758af087fa",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "7f157a46-27d3-4eae-84fd-466d7bb1aad9",
+      "clientId": "35119009-b2b0-454e-954e-618c7831e4b2",
+      "workerId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "cdf75f54-2680-4447-a55d-c80c77ae0c7e",
+      "clientId": "35119009-b2b0-454e-954e-618c7831e4b2",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "fe485452-27a2-42e2-bb7d-a642b2d8e0ca",
+      "clientId": "1576db2b-101d-4675-ab7d-6eeaad7bb321",
+      "workerId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "de31081e-6da1-4818-a93d-19ca328c05da",
+      "clientId": "1576db2b-101d-4675-ab7d-6eeaad7bb321",
+      "workerId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "6c6566a9-58f8-41fe-8e80-4b3eae326c8a",
+      "userId": "73aa95a5-ebd2-4589-aac7-4a34b5ebed34",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "b8c9818c-cf81-4d0a-a936-92f59d06110d",
+      "userId": "099514a4-3dcb-4d03-9a09-4ee2b51f6f03",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "2c87a0ed-32e2-4c98-8058-55eae2927772",
+      "userId": "ad8c9f9a-24b3-41ac-86c6-ecf5dae364e3",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "896e4c5c-3508-441e-8f34-d57261060e1d",
+      "userId": "11452d22-c496-4c87-b153-85eba4257824",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "b67febe0-9ac1-41a2-b9cc-d9525e679f75",
+      "userId": "5d328d7d-6754-41d4-9418-0bec2b7e9cf7",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "2068e201-7825-454e-96bc-90c1afe6b64e",
+      "userId": "70bda395-ec32-4c4d-baff-8f1894705f32",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "af87937f-2518-43d4-8c59-ec4c78bbb941",
+      "userId": "74fc8c63-ddde-4226-a928-fd81aed166ea",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "b70a8a70-183e-40bb-a1eb-ead9e252ea05",
+      "userId": "e67e21e3-fd84-4c93-9df8-727a00c96228",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "eb865b9b-24df-4f14-a0cc-3c03cfd5a242",
+      "userId": "d42f26d0-560f-4e5c-8f7b-eebd3dd034e9",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "6421331a-73d6-433b-8128-3bd118ff0d03",
+      "userId": "789b0da8-c4b0-4439-9774-5b728bf4c840",
+      "type": "VERIFICATION",
+      "title": "Application approved",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "8b7aeff0-8d5c-4c1e-b862-2799e3400472",
+      "userId": "675bd59b-83c1-40a8-ba76-f64dc9a9b1dc",
+      "type": "VERIFICATION",
+      "title": "Application pending",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "70205d4e-45e9-4fca-82df-dd4be5f9d6cd",
+      "userId": "00debe57-3ae2-4ed2-98e7-52b6b4484a5d",
+      "type": "VERIFICATION",
+      "title": "Application pending",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "ef9762a2-3c29-41a1-a058-8fbde23508bb",
+      "userId": "aa12bb97-f755-4e5b-a374-618db59456d1",
+      "type": "VERIFICATION",
+      "title": "Application pending",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "cd626e01-4d7f-410e-b432-cd730b638ed7",
+      "userId": "1f24462e-06f6-4df5-b187-f604e5d2d213",
+      "type": "VERIFICATION",
+      "title": "Application pending",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "fc41178b-287e-400b-8578-11e1c5976034",
+      "userId": "04891f11-59cd-4235-b5fe-9feca256fae2",
+      "type": "VERIFICATION",
+      "title": "Application pending",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "11f9037e-e8a0-4682-b4b1-a95ee6ae8fca",
+      "userId": "d367fabf-8123-40de-b115-2e5f861b6c74",
+      "type": "VERIFICATION",
+      "title": "Application under review",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "f6f14c8e-3aef-4dff-b464-a5e8dbc4efdb",
+      "userId": "a11e90f4-a732-4d44-a77b-05232392f05f",
+      "type": "VERIFICATION",
+      "title": "Application under review",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "83418623-bdfa-4866-a6d4-b7384b424e1b",
+      "userId": "afc26ab3-4dad-41d9-aacd-d1b558ca9f92",
+      "type": "VERIFICATION",
+      "title": "Application rejected",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "2f9a0e2c-38b4-4375-9d3c-0644359d7cfd",
+      "userId": "aa490322-e741-498f-ba49-fb7849bea16b",
+      "type": "VERIFICATION",
+      "title": "Application rejected",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "0f6f6496-3a56-4b88-b12a-4bfff85041d1",
+      "userId": "61f8d9b1-847f-49f8-a117-ae5c79fe028d",
+      "type": "VERIFICATION",
+      "title": "Application rejected",
+      "message": "This fictional application demonstrates the internal review process.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "64e59db6-f679-4054-9915-222b28c5cfa0",
+      "userId": "e1d482df-c64c-488b-9cfe-fa2a3df41480",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "c67ab3d4-42d7-4fdf-b857-30eabd8a26ba",
+      "userId": "efedbd0d-5a7f-4ae9-b169-13c6c270dff0",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "fd320b58-d455-4714-9a13-b846f2cb7810",
+      "userId": "94d5fd59-e822-4079-9126-904f67c60689",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "2f3eac6b-ecc1-4ae4-98d4-dedbfe74e18a",
+      "userId": "c9a3edc6-3058-4470-8da6-eb61bef281bb",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a3a2f67b-9dab-4960-ba69-4a4f2266b361",
+      "userId": "059cf31e-0f6c-48ac-b4a8-2e8f697e374c",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "4dd43601-9c64-466e-80cc-651df1c52bf6",
+      "userId": "831c306a-aaee-40a2-bfc4-4c3b0c456fc5",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5e54fd77-32b3-4ea1-91e7-cd2d6f4289b7",
+      "userId": "39cba4e9-fab9-4e91-b0b9-3d598a1699b5",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "68e1869c-29a1-4bce-bd4e-9d6d813bf129",
+      "userId": "abd169bf-8367-4c34-9f1b-e0a8a91832e0",
+      "type": "WELCOME",
+      "title": "Welcome to CareMatch",
+      "message": "Explore professionals, save your favourites and track your demo care requests.",
+      "isRead": false,
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "94f33d94-c5cd-41a4-8a3f-11ea4d4123a7",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "699472ad-69b0-4912-a48f-94a883d82e53",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "c5c2e88b-b6e7-4f08-a76c-bd1cd0389003",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "0e0d9f26-aad7-41d3-bfaf-3c860e419b7a",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "95080c6d-a9f4-4acf-bce4-b4a04f216bd6",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "5089a5de-7cf5-4b58-bf2d-f54c12fdb1db",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "b3fbde30-778b-4a6c-9737-8144934896d5",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "26f6d142-42f9-4667-9176-ee34620c7fe6",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "e1e71de2-2e2a-4513-b81e-2701c8f3be6c",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "34dde594-7108-4f25-847f-99702d08d5c3",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "61f631fd-7ad6-4813-9758-7b5ca0f8eee1",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "3f862fcd-f9ef-4456-baf6-a3fb9e895865",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "0cb91a2d-ddf4-4b8f-9d64-41cc894dcc4e",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "67ea3e49-75bc-4993-ba46-b7d4481098d0",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a50f0446-ee9c-41b8-bc68-1e7fa14b1ac5",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "f2fa9783-45bc-4ea2-af01-573c8f81833c",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "1130fc63-c314-4474-96e3-9ac3bd69f589",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "2de2d37a-1c79-4a7f-b0aa-ce4fc84e5e7b",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "24a93c6f-28b9-4ad7-bffd-b0426b27a4db",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification approved",
+      "entityType": "WorkerProfile",
+      "entityId": "d36d4dc3-bb66-4edc-89e4-e06f019ba33c",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "bf66fffb-1abd-4600-90a6-48feb862e6e9",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification pending",
+      "entityType": "WorkerProfile",
+      "entityId": "90c8b592-d9d8-4677-afe4-666930204d31",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "84e69d18-08e7-4a6b-944a-b85b271c30d5",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification pending",
+      "entityType": "WorkerProfile",
+      "entityId": "cb80f6ff-1a30-4d7e-b615-998838e4d54f",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a06853d0-5108-4975-8cc9-e0c2cfcc4b00",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification pending",
+      "entityType": "WorkerProfile",
+      "entityId": "8546fe58-636d-4cce-99ca-1b10c31ce633",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "edeceaaa-1e2b-4e79-b938-b6a6e70a6cf6",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification pending",
+      "entityType": "WorkerProfile",
+      "entityId": "3f343981-bb15-4abc-8dc8-155aad7a86c1",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "de7a3b89-0baf-4790-b443-f338df0ef135",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification pending",
+      "entityType": "WorkerProfile",
+      "entityId": "ca4cb7bb-c7df-4d82-82cb-aa41f40c57c9",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "bb591d69-e0bd-4ae5-acec-e1cff0ac122d",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification under_review",
+      "entityType": "WorkerProfile",
+      "entityId": "8b4ba1da-a754-41cc-932b-e3af418af29c",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "6d62a142-f61b-4f56-8c89-09adc808eb63",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification under_review",
+      "entityType": "WorkerProfile",
+      "entityId": "dd1d6e34-9776-47f2-a89a-9d7322328f0f",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "c5d54124-3289-4b0d-a56e-9725a1b8e7e4",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification rejected",
+      "entityType": "WorkerProfile",
+      "entityId": "2abda1e2-4105-44c4-b115-214bed449bb5",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "11baa8ce-631d-4313-9c19-4b5a301a6104",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification rejected",
+      "entityType": "WorkerProfile",
+      "entityId": "135163e3-fc81-4b71-834a-4146f4fbd6f0",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "6fcfbacc-81e4-4318-80da-372d96ca451b",
+      "actorId": "ff65670a-0c3f-4f88-b8d7-eaa02bb8e9d0",
+      "action": "Seeded verification rejected",
+      "entityType": "WorkerProfile",
+      "entityId": "b2994248-6d4b-42a0-ac75-871d6da14d5d",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "834c59ea-cd32-41ca-a27a-824b2c3e3cbc",
+      "actorId": "e1d482df-c64c-488b-9cfe-fa2a3df41480",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "e1d482df-c64c-488b-9cfe-fa2a3df41480",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "5a7daa6d-64fb-4eb6-aeca-8f0690359183",
+      "actorId": "efedbd0d-5a7f-4ae9-b169-13c6c270dff0",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "efedbd0d-5a7f-4ae9-b169-13c6c270dff0",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "21918958-8a36-48fd-a183-46acecc88cdd",
+      "actorId": "94d5fd59-e822-4079-9126-904f67c60689",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "94d5fd59-e822-4079-9126-904f67c60689",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "52cdc3d1-8ae5-40d9-a70d-7da5d4b0d277",
+      "actorId": "c9a3edc6-3058-4470-8da6-eb61bef281bb",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "c9a3edc6-3058-4470-8da6-eb61bef281bb",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "3c63c234-0703-4675-9e71-99e2234e4b9b",
+      "actorId": "059cf31e-0f6c-48ac-b4a8-2e8f697e374c",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "059cf31e-0f6c-48ac-b4a8-2e8f697e374c",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "a4c2fa0d-b7a4-4d14-8d67-7e0507ee841f",
+      "actorId": "831c306a-aaee-40a2-bfc4-4c3b0c456fc5",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "831c306a-aaee-40a2-bfc4-4c3b0c456fc5",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "7aa14555-ab6f-417a-bd81-8cf77672ed41",
+      "actorId": "39cba4e9-fab9-4e91-b0b9-3d598a1699b5",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "39cba4e9-fab9-4e91-b0b9-3d598a1699b5",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    },
+    {
+      "id": "3d02039b-d03e-4bb6-8eea-961af12921e3",
+      "actorId": "abd169bf-8367-4c34-9f1b-e0a8a91832e0",
+      "action": "Client registered",
+      "entityType": "User",
+      "entityId": "abd169bf-8367-4c34-9f1b-e0a8a91832e0",
+      "createdAt": "2026-11-15T09:00:00.000Z"
+    }
+  ],
+  "resetTokens": []
+}

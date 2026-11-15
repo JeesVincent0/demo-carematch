@@ -1,5 +1,9 @@
+'use client';
+import { useCallback } from 'react';
+import { DemoView, redirect, notFound } from '@/components/demo-view';
+import { ResetDemo } from '@/components/demo-controls';
 import Link from 'next/link';
-import { redirect, notFound } from 'next/navigation';
+
 import {
   CalendarDays,
   Clock,
@@ -10,9 +14,9 @@ import {
   ArrowRight,
   Bell,
 } from 'lucide-react';
-import type { Role, User, Prisma } from '@prisma/client';
+import type { Role, User, RequestWithPeople } from '@/lib/demo/types';
 import { currentUser } from '@/lib/auth';
-import { db } from '@/lib/prisma';
+import { demoRepository as db, type Where } from '@/lib/demo/repository';
 import { date, label, money } from '@/lib/utils';
 import { publicSelect, publicWhere, type SearchParams, value } from './queries';
 import { Logo, Badge, Empty, ProfessionalCard } from '@/components/shared';
@@ -22,7 +26,7 @@ import { Button } from '@/components/ui/button';
 import { ProfileForm, AvailabilityForm } from '@/components/forms';
 import { Onboarding } from '@/components/onboarding';
 import { Analytics, UsersTable, ReviewActions } from '@/components/admin';
-export async function DashboardLayout({
+async function renderDashboardLayout({
   children,
   role,
 }: {
@@ -124,8 +128,8 @@ const requestInclude = {
   worker: {
     include: { user: { select: { id: true, firstName: true, lastName: true, avatarUrl: true } } },
   },
-} satisfies Prisma.CareRequestInclude;
-type RequestWithPeople = Prisma.CareRequestGetPayload<{ include: typeof requestInclude }>;
+};
+
 function RequestActions({ r, role }: { r: RequestWithPeople; role: Role }) {
   return (
     <div className="request-actions">
@@ -258,7 +262,7 @@ function Activity({
     </ul>
   );
 }
-export async function DashboardPage({
+async function renderDashboardPage({
   role,
   section,
   searchParams,
@@ -524,7 +528,7 @@ export async function DashboardPage({
     );
   }
   if (page === 'requests') {
-    const where: Prisma.CareRequestWhereInput =
+    const where: Where =
       role === 'ADMIN'
         ? {}
         : role === 'CLIENT'
@@ -843,7 +847,7 @@ export async function DashboardPage({
           </div>
         </div>
         <div className="content-card" style={{ marginTop: 24 }}>
-          <h2>Private evidence</h2>
+          <h2>Browser-only sample evidence</h2>
           <div className="document-list">
             {w.documents.map((d) => (
               <div className="document-item" key={d.id}>
@@ -856,8 +860,8 @@ export async function DashboardPage({
                       : 'Uploaded, not yet reviewed'}
                   </small>
                 </div>
-                <a href={`/api/documents/${d.id}`} target="_blank" rel="noreferrer">
-                  Download privately ↗
+                <a href={d.dataUrl} download={d.originalFileName} target="_blank" rel="noreferrer">
+                  Download sample ↗
                 </a>
               </div>
             ))}
@@ -891,7 +895,7 @@ export async function DashboardPage({
     const c = await db.clientProfile.findUniqueOrThrow({ where: { userId: u.id } });
     return (
       <>
-        {heading('Your personal details.', 'Keep your contact information up to date.')}
+        {heading('Your demo details.', 'Keep your contact information up to date.')}
         <div className="content-card stack">
           <Upload />
           <ProfileForm
@@ -922,10 +926,11 @@ export async function DashboardPage({
             <Logout />
           </div>
           <div className="content-card">
-            <h2>Your demo account</h2>
+            <h2>Your browser demo</h2>
+            <ResetDemo />
             <p>
-              Use fictional data only. The local operator can remove test data from the database and
-              private upload directory.
+              Changes and sample uploads stay in this browser. Reset the demo to restore the bundled
+              JSON examples. Use fictional details only.
             </p>
             <p>
               No payments, real medical consultations or external credential verification take
@@ -1077,15 +1082,15 @@ async function adminPage(u: User, page: string, id: string | undefined, p: Searc
           <div className="dashboard-columns">
             <div className="stack">
               <section className="content-card">
-                <h2>Professional & private details</h2>
+                <h2>Professional & demo details</h2>
                 <dl className="detail-grid">
                   {[
                     ['Email', w.user.email],
                     ['Phone', w.user.phone],
                     ['City / postcode', `${w.city} / ${w.postcode}`],
-                    ['Address (private)', w.address || 'Not supplied'],
-                    ['Date of birth (private)', w.dateOfBirth || 'Not supplied'],
-                    ['Registration (private)', w.registrationNumber || 'Not applicable'],
+                    ['Address (demo-only)', w.address || 'Not supplied'],
+                    ['Date of birth (demo-only)', w.dateOfBirth || 'Not supplied'],
+                    ['Registration (demo-only)', w.registrationNumber || 'Not applicable'],
                     ['Account status', label(w.user.status)],
                     ['Indicative rate', money(w.hourlyRate)],
                     ['Experience', `${w.experienceYears} years`],
@@ -1119,8 +1124,13 @@ async function adminPage(u: User, page: string, id: string | undefined, p: Searc
                         </div>
                       </div>
                       <div className="stack">
-                        <a href={`/api/documents/${d.id}`} target="_blank" rel="noreferrer">
-                          Download privately ↗
+                        <a
+                          href={d.dataUrl}
+                          download={d.originalFileName}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Download sample ↗
                         </a>
                         {w.verificationStatus === 'UNDER_REVIEW' &&
                           d.reviewStatus !== 'REVIEWED' && (
@@ -1281,4 +1291,20 @@ async function adminPage(u: User, page: string, id: string | undefined, p: Searc
     );
   }
   notFound();
+}
+
+export function DashboardLayout(props: { children: React.ReactNode; role: Role }) {
+  const load = useCallback(() => renderDashboardLayout(props), [props.children, props.role]);
+  return <DemoView load={load} />;
+}
+export function DashboardPage(props: {
+  role: Role;
+  section?: string[];
+  searchParams: SearchParams;
+}) {
+  const load = useCallback(
+    () => renderDashboardPage(props),
+    [props.role, props.section, props.searchParams],
+  );
+  return <DemoView load={load} />;
 }

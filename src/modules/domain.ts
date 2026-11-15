@@ -1,4 +1,4 @@
-import type { Role, VerificationStatus, RequestStatus } from '@prisma/client';
+import type { Role, VerificationStatus, RequestStatus } from '@/lib/demo/types';
 export const professions = [
   'Nurse',
   'Doctor',

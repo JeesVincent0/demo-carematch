@@ -5,3 +5,5 @@ public/fonts
 playwright-report
 test-results
 package-lock.json
+
+.legacy-database-backup/

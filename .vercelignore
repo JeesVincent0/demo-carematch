@@ -1,0 +1,6 @@
+.legacy-database-backup
+.local
+test-results
+playwright-report
+tests
+.env

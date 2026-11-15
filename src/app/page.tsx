@@ -18,16 +18,10 @@ import { MarketingLayout } from '@/components/layout';
 import { Button } from '@/components/ui/button';
 import { SectionHead, ProfessionalCard } from '@/components/shared';
 import { SearchWidget, ServiceCards, FAQ, FinalCTA } from '@/components/marketing';
-import { db } from '@/lib/prisma';
+import { FeaturedProfessionals } from '@/components/featured-professionals';
 import { publicSelect, publicWhere } from '@/modules/queries';
-export const dynamic = 'force-dynamic';
-export default async function Home() {
-  const workers = await db.workerProfile.findMany({
-    where: publicWhere,
-    select: publicSelect,
-    take: 4,
-    orderBy: { createdAt: 'asc' },
-  });
+
+export default function Home() {
   return (
     <MarketingLayout>
       <section className="hero">
@@ -196,11 +190,7 @@ export default async function Home() {
           href="/find-care"
           cta="Meet all professionals"
         />
-        <div className="professional-grid">
-          {workers.map((w) => (
-            <ProfessionalCard worker={w} key={w.id} />
-          ))}
-        </div>
+        <FeaturedProfessionals />
       </section>
       <section className="container values-section">
         <div className="values-image">

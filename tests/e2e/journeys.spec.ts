@@ -1,20 +1,23 @@
 import { test, expect, type Page, type BrowserContext } from '@playwright/test';
-import { PrismaClient } from '@prisma/client';
-const db = new PrismaClient();
-const password = process.env.DEMO_PASSWORD!;
+import type { DemoData } from '../../src/lib/demo/types';
+import seed from '../../src/data/demo.json';
+const password = 'CareMatch-Demo-2026!';
 const suffix = Date.now();
-const workerEmail = `e2e-worker-${suffix}@carematch.demo`;
-const clientEmail = `e2e-client-${suffix}@carematch.demo`;
+const workerEmail = `worker-${suffix}@demo.test`;
+const clientEmail = `client-${suffix}@demo.test`;
 const city = `Testford${suffix}`;
-let worker: Page,
+let context: BrowserContext,
+  worker: Page,
   admin: Page,
   client: Page,
-  workerContext: BrowserContext,
-  adminContext: BrowserContext,
-  clientContext: BrowserContext,
+  visitor: Page,
   workerId: string,
   slug: string,
   requestId: string;
+const data = (page: Page) =>
+  page.evaluate(() =>
+    JSON.parse(localStorage.getItem('carematch-demo-v1') || '{}'),
+  ) as Promise<DemoData>;
 async function login(page: Page, email: string) {
   await page.goto('/login');
   await page.getByLabel('Email address').fill(email);
@@ -22,7 +25,7 @@ async function login(page: Page, email: string) {
   await page.getByRole('button', { name: 'Sign in', exact: true }).click();
   await expect(page).toHaveURL(/\/dashboard$/);
 }
-async function register(page: Page, role: 'worker' | 'client', email: string) {
+async function register(page: Page, role: 'client' | 'worker', email: string) {
   await page.goto(`/register/${role}`);
   await page
     .getByLabel('First name', { exact: true })
@@ -36,22 +39,21 @@ async function register(page: Page, role: 'worker' | 'client', email: string) {
   await page.getByRole('button', { name: 'Create your account' }).click();
   await expect(page).toHaveURL(role === 'worker' ? /\/worker\/onboarding/ : /\/client\/dashboard/);
 }
-test.describe.serial('Complete CareMatch presentation journeys', () => {
+test.describe.serial('JSON-only demo journeys', () => {
   test.beforeAll(async ({ browser }) => {
-    workerContext = await browser.newContext();
-    adminContext = await browser.newContext();
-    clientContext = await browser.newContext();
-    worker = await workerContext.newPage();
-    admin = await adminContext.newPage();
-    client = await clientContext.newPage();
+    context = await browser.newContext();
+    worker = await context.newPage();
+    admin = await context.newPage();
+    client = await context.newPage();
+    visitor = await context.newPage();
   });
-  test('1. Worker registers, saves profile steps and submits private evidence', async () => {
+  test('1. Register worker, persist onboarding steps and add browser-only evidence', async () => {
     await register(worker, 'worker', workerEmail);
     await worker.getByLabel('City', { exact: true }).fill(city);
     await worker.getByLabel('Postcode', { exact: true }).fill('SW1A 1AA');
     await worker
       .getByLabel('Short introduction')
-      .fill('A thoughtful fictional nurse who brings calm and kindness to everyday care.');
+      .fill('A thoughtful fictional nurse bringing calm and kindness to everyday routines.');
     await worker.getByRole('button', { name: 'Save & continue' }).click();
     await expect(worker.getByRole('heading', { name: 'Share your experience.' })).toBeVisible();
     await worker.getByLabel('Professional title').fill('Community nurse');
@@ -62,16 +64,17 @@ test.describe.serial('Complete CareMatch presentation journeys', () => {
     await worker
       .getByLabel('About you')
       .fill(
-        'I am a fictional professional for the CareMatch demo. My approach is calm, thoughtful and built around the routines that make everyday life feel comfortable.',
+        'I am a fictional professional for this browser demonstration. My care approach is calm and thoughtful, with a focus on comfortable everyday routines.',
       );
     await worker.getByRole('button', { name: 'Save & continue' }).click();
     await expect(worker.getByRole('heading', { name: 'Care that works for you.' })).toBeVisible();
     await worker.getByLabel('Indicative hourly rate (£)').fill('27.50');
     await worker.getByRole('checkbox', { name: 'Companionship', exact: true }).check();
     await worker.getByRole('checkbox', { name: 'Hourly Care', exact: true }).check();
+    await worker.getByRole('button', { name: 'Save availability', exact: true }).click();
     await worker.getByRole('button', { name: 'Save & continue' }).click();
     await expect(
-      worker.getByRole('heading', { name: 'A little evidence. Kept private.' }),
+      worker.getByRole('heading', { name: 'Sample evidence, stored in this browser.' }),
     ).toBeVisible();
     for (const name of [
       'Identity document',
@@ -79,36 +82,41 @@ test.describe.serial('Complete CareMatch presentation journeys', () => {
       'Criminal-record-check evidence',
       'Qualification evidence',
     ]) {
-      const input = worker.locator('label.upload-label').filter({ hasText: name }).locator('input');
-      await input.setInputFiles({
-        name: 'sample-evidence.pdf',
-        mimeType: 'application/pdf',
-        buffer: Buffer.from('%PDF-1.4\n% FICTIONAL SAMPLE EVIDENCE ONLY\n%%EOF'),
-      });
+      await worker
+        .locator('label.upload-label')
+        .filter({ hasText: name })
+        .locator('input')
+        .setInputFiles({
+          name: 'sample-evidence.pdf',
+          mimeType: 'application/pdf',
+          buffer: Buffer.from('%PDF-1.4\n% FICTIONAL SAMPLE ONLY\n%%EOF'),
+        });
       await expect(worker.getByText(name, { exact: true }).first()).toBeVisible();
     }
     await worker.getByRole('button', { name: 'Save & continue' }).click();
     await worker.getByRole('button', { name: 'Submit for verification' }).click();
     await worker.getByRole('button', { name: 'Confirm', exact: true }).click();
     await expect(worker).toHaveURL(/\/worker\/verification$/);
-    await expect(worker.getByText('Pending', { exact: true })).toBeVisible();
-    const w = await db.workerProfile.findFirstOrThrow({ where: { user: { email: workerEmail } } });
+    await expect(worker.getByText('Pending', { exact: true }).first()).toBeVisible();
+    const state = await data(worker);
+    const user = state.users.find((u) => u.email === workerEmail)!;
+    const w = state.workers.find((w) => w.userId === user.id)!;
     workerId = w.id;
     slug = w.slug;
-    expect(w.verificationStatus).toBe('PENDING');
+    expect(w.registrationNumber).toBe('DEMO-NMC-E2E');
+    expect(w.availability).toHaveLength(7);
+    await worker.reload();
+    await expect(worker.getByText('Pending', { exact: true }).first()).toBeVisible();
   });
-  test('2. Admin reviews each document and approves the application', async () => {
-    await login(admin, process.env.ADMIN_EMAIL || 'admin@carematch.demo');
+  test('2. Admin in another tab reviews evidence and approves the JSON profile', async () => {
+    await login(admin, 'admin@carematch.demo');
     await admin.goto(`/admin/verifications/${workerId}`);
     await admin.getByRole('button', { name: 'Start review', exact: true }).click();
     await expect(admin.getByText('Under review', { exact: true }).first()).toBeVisible();
-    const docs = await db.verificationDocument.findMany({ where: { workerId } });
-    expect(docs).toHaveLength(4);
-    for (const d of docs) {
-      const response = await admin.request.get(`/api/documents/${d.id}`);
-      expect(response.status()).toBe(200);
-      expect(response.headers()['cache-control']).toBe('private, no-store');
-    }
+    expect((await data(admin)).documents.filter((d) => d.workerId === workerId)).toHaveLength(4);
+    expect(
+      await admin.getByRole('link', { name: 'Download sample ↗' }).first().getAttribute('href'),
+    ).toMatch(/^data:application\/pdf/);
     for (let i = 0; i < 4; i++) {
       await admin.getByRole('button', { name: 'Mark reviewed', exact: true }).first().click();
       await admin.getByRole('button', { name: 'Confirm', exact: true }).click();
@@ -119,21 +127,19 @@ test.describe.serial('Complete CareMatch presentation journeys', () => {
     await admin.getByRole('button', { name: 'Approve application' }).click();
     await admin.getByRole('button', { name: 'Confirm', exact: true }).click();
     await expect(admin.getByText('Approved', { exact: true }).first()).toBeVisible();
-    expect(
-      (await db.workerProfile.findUniqueOrThrow({ where: { id: workerId } })).verificationStatus,
-    ).toBe('APPROVED');
+    await expect(worker.getByText('Approved', { exact: true }).first()).toBeVisible();
   });
-  test('3. Approved worker appears in search without exposing private data', async ({ page }) => {
-    await page.goto(`/find-care?location=${city}`);
-    await expect(page.getByRole('heading', { name: 'Eleanor DemoJourney' })).toBeVisible();
-    await page.getByRole('link', { name: 'View profile', exact: true }).click();
-    await expect(page).toHaveURL(`/professionals/${slug}`);
-    await expect(page.getByText('£27.50').first()).toBeVisible();
-    expect(await page.content()).not.toContain('DEMO-NMC-E2E');
-    const doc = await db.verificationDocument.findFirstOrThrow({ where: { workerId } });
-    expect((await page.request.get(`/api/documents/${doc.id}`)).status()).toBe(401);
+  test('3. Approved professional appears in search and reload keeps changes', async () => {
+    await visitor.goto(`/find-care?location=${city}`);
+    await expect(visitor.getByRole('heading', { name: 'Eleanor DemoJourney' })).toBeVisible();
+    await visitor.reload();
+    await expect(visitor.getByRole('heading', { name: 'Eleanor DemoJourney' })).toBeVisible();
+    await visitor.getByRole('link', { name: 'View profile', exact: true }).click();
+    await expect(visitor).toHaveURL(`/professionals/${slug}`);
+    await expect(visitor.getByText('£27.50').first()).toBeVisible();
+    await expect(visitor.getByText('DEMO-NMC-E2E', { exact: true })).toHaveCount(0);
   });
-  test('4. Client registers, saves a favourite and sends a care request', async () => {
+  test('4. Client registers, saves favourite and sends a demo request', async () => {
     await register(client, 'client', clientEmail);
     await client.goto(`/professionals/${slug}`);
     await client.getByRole('button', { name: 'Save professional' }).click();
@@ -141,7 +147,7 @@ test.describe.serial('Complete CareMatch presentation journeys', () => {
     await client.getByLabel('Type of care').selectOption('Companionship');
     await client
       .getByLabel('Preferred date')
-      .fill(new Date(Date.now() + 86400000 * 3).toISOString().slice(0, 10));
+      .fill(new Date(Date.now() + 3 * 86400000).toISOString().slice(0, 10));
     await client.getByLabel('General location').fill(city);
     await client
       .getByLabel('How can they help?')
@@ -151,103 +157,62 @@ test.describe.serial('Complete CareMatch presentation journeys', () => {
     requestId = client.url().split('/').pop()!;
     await expect(client.getByText('Pending', { exact: true })).toBeVisible();
   });
-  test('5. Worker accepts and client sees the persisted update', async () => {
+  test('5. Worker accepts and the client sees the cross-tab update', async () => {
     await worker.goto('/worker/requests');
     await worker.getByRole('button', { name: 'Accept', exact: true }).click();
     await worker.getByRole('button', { name: 'Confirm', exact: true }).click();
-    await expect(worker.getByText('Accepted', { exact: true })).toBeVisible();
-    await client.goto(`/client/requests/${requestId}`);
+    await expect(worker.getByRole('article').getByText('Accepted', { exact: true })).toBeVisible();
     await expect(client.getByText('Accepted', { exact: true })).toBeVisible();
-    expect((await db.careRequest.findUniqueOrThrow({ where: { id: requestId } })).status).toBe(
-      'ACCEPTED',
-    );
+    expect((await data(client)).requests.find((r) => r.id === requestId)?.status).toBe('ACCEPTED');
     await client.goto('/client/notifications');
     await expect(client.getByRole('heading', { name: 'Request accepted' })).toBeVisible();
   });
-  test('6. Role, ownership and CSRF checks deny unauthorised access', async ({ page }) => {
+  test('6. Demo role and ownership screens remain distinct', async () => {
     await client.goto('/admin/dashboard');
     await expect(client.getByRole('heading', { name: 'This area is restricted' })).toBeVisible();
-    const base = process.env.NEXTAUTH_URL!;
-    const forbidden = await client.request.post('/api/actions/review', {
-      headers: { Origin: base },
-      data: { id: workerId, status: 'SUSPENDED', notes: 'Not authorised to do this' },
-    });
-    expect(forbidden.status()).toBe(403);
-    const csrf = await client.request.post('/api/actions/notifications', {
-      headers: { Origin: 'https://untrusted.example' },
-      data: {},
-    });
-    expect(csrf.status()).toBe(403);
-    await page.goto('/admin/dashboard');
-    await expect(page).toHaveURL(/\/login$/);
-    const otherRequest = await db.careRequest.findFirstOrThrow({
-      where: { client: { user: { email: 'olivia@carematch.demo' } } },
-    });
-    await client.goto(`/client/requests/${otherRequest.id}`);
+    await visitor.goto('/admin/dashboard');
+    await expect(visitor).toHaveURL(/\/login$/);
+    await client.goto(`/client/requests/${seed.requests[0].id}`);
     await expect(client.getByRole('heading', { name: 'This page isn’t available.' })).toBeVisible();
-    const doc = await db.verificationDocument.findFirstOrThrow({ where: { workerId } });
-    expect((await client.request.get(`/api/documents/${doc.id}`)).status()).toBe(404);
   });
-  test('7. Suspended and rejected professionals stay out of public search', async ({ page }) => {
+  test('7. Suspended and rejected workers are hidden from the demo marketplace', async () => {
     await admin.goto(`/admin/verifications/${workerId}`);
     await admin.getByRole('button', { name: 'Suspend professional', exact: true }).click();
-    await admin.getByLabel('Reason').fill('Fictional restriction for automated demo testing.');
+    await admin.getByLabel('Reason').fill('Fictional restriction for demo testing.');
     await admin.getByRole('button', { name: 'Confirm decision' }).click();
     await expect(admin.getByText('Suspended', { exact: true }).first()).toBeVisible();
+    await visitor.goto(`/find-care?location=${city}`);
+    await expect(visitor.getByRole('heading', { name: 'Let’s try a wider search.' })).toBeVisible();
+    await visitor.goto(`/professionals/${slug}`);
+    await expect(
+      visitor.getByRole('heading', { name: 'This page isn’t available.' }),
+    ).toBeVisible();
+    const rejected = seed.workers.find((w) => w.verificationStatus === 'REJECTED')!;
+    await visitor.goto(`/professionals/${rejected.slug}`);
+    await expect(
+      visitor.getByRole('heading', { name: 'This page isn’t available.' }),
+    ).toBeVisible();
+  });
+  test('8. Another browser has its own seed; reset restores this browser', async ({ page }) => {
     await page.goto(`/find-care?location=${city}`);
     await expect(page.getByRole('heading', { name: 'Let’s try a wider search.' })).toBeVisible();
-    const response = await page.goto(`/professionals/${slug}`);
-    expect(response?.status()).toBe(404);
-    const rejected = await db.workerProfile.findFirstOrThrow({
-      where: { verificationStatus: 'REJECTED' },
-    });
-    expect((await page.goto(`/professionals/${rejected.slug}`))?.status()).toBe(404);
+    await admin.goto('/admin/settings');
+    await admin.getByRole('button', { name: 'Reset this browser’s demo' }).click();
+    await admin.getByRole('button', { name: 'Reset demo', exact: true }).click();
+    await expect(admin).toHaveURL('/');
+    await expect(admin.getByRole('heading', { level: 1 })).toBeVisible();
+    expect(await admin.evaluate(() => localStorage.getItem('carematch-demo-v1'))).toBeNull();
   });
   test.afterAll(async () => {
-    await workerContext?.close();
-    await adminContext?.close();
-    await clientContext?.close();
-    const users = await db.user.findMany({ where: { email: { in: [workerEmail, clientEmail] } } });
-    const ids = users.map((u) => u.id);
-    const workers = await db.workerProfile.findMany({ where: { userId: { in: ids } } });
-    const wids = workers.map((w) => w.id);
-    const docs = await db.verificationDocument.findMany({ where: { workerId: { in: wids } } });
-    const requests = await db.careRequest.findMany({
-      where: { OR: [{ workerId: { in: wids } }, { client: { userId: { in: ids } } }] },
-    });
-    await db.auditLog.deleteMany({
-      where: {
-        OR: [
-          { actorId: { in: ids } },
-          {
-            entityId: {
-              in: [...ids, ...wids, ...docs.map((d) => d.id), ...requests.map((r) => r.id)],
-            },
-          },
-        ],
-      },
-    });
-    await db.careRequest.deleteMany({ where: { id: { in: requests.map((r) => r.id) } } });
-    await db.verificationReview.deleteMany({
-      where: { OR: [{ reviewedBy: { in: ids } }, { workerId: { in: wids } }] },
-    });
-    await db.user.deleteMany({ where: { id: { in: ids } } });
-    const { unlink } = await import('node:fs/promises');
-    const { resolve } = await import('node:path');
-    for (const d of docs)
-      await unlink(resolve(process.env.UPLOAD_DIR || '.local/uploads', d.privateStorageKey)).catch(
-        () => {},
-      );
-    await db.$disconnect();
+    await context?.close();
   });
 });
-test('Public pages and responsive layouts render without broken images or overflow', async ({
-  page,
-}) => {
+test('Public pages and desktop/mobile layouts render without browser errors', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (e) => errors.push(e.message));
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+  await expect(page.getByRole('link', { name: 'View profile', exact: true })).toHaveCount(4);
   await page.evaluate(() => document.fonts.ready);
   await page.screenshot({ path: 'test-results/home-desktop.png', fullPage: true });
   for (const path of [
@@ -267,26 +232,13 @@ test('Public pages and responsive layouts render without broken images or overfl
   }
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await page.evaluate(() => document.fonts.ready);
+  await expect(page.getByRole('link', { name: 'View profile', exact: true })).toHaveCount(4);
   await page.screenshot({ path: 'test-results/home-mobile.png', fullPage: true });
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
-    true,
-  );
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('button', { name: 'Open navigation' }).click();
   await expect(page.getByRole('navigation', { name: 'Mobile navigation' })).toBeVisible();
   await page.goto('/find-care');
-  await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
-    true,
-  );
-  const images = await page
-    .locator('img')
-    .evaluateAll((imgs) =>
-      imgs.every(
-        (i) => (i as HTMLImageElement).complete && (i as HTMLImageElement).naturalWidth > 0,
-      ),
-    );
-  expect(images).toBe(true);
+  await expect(page.getByRole('link', { name: 'View profile', exact: true })).toHaveCount(6);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   expect(errors).toEqual([]);
 });

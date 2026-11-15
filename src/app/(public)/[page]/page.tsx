@@ -149,7 +149,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                           ],
                           [
                             'Submit your evidence',
-                            'Upload private documents appropriate to your category for a manual demo review.',
+                            'Add sample documents to this browser for a manual demo review.',
                           ],
                           [
                             'Connect with clients',
@@ -246,7 +246,7 @@ export default async function Page({ params }: { params: Promise<{ page: string 
               ? [
                   [
                     'What this demo stores',
-                    'Account names, email addresses, hashed passwords, contact details, fictional professional profiles, care requests and notification history are stored in the configured PostgreSQL database. Uploaded documents are stored privately on the server.',
+                    'The application starts from a bundled JSON file of fictional accounts and profiles. Your demo changes, hashed demo passwords, requests and sample uploads stay in browser local storage. No database or upload server is used.',
                   ],
                   [
                     'Use sample information only',
@@ -254,15 +254,15 @@ export default async function Page({ params }: { params: Promise<{ page: string 
                   ],
                   [
                     'Who can see information',
-                    'Public visitors see only approved, active, listed professional profiles. Private documents are available only to their owner and authorised administrators. Clients and workers see requests that belong to them.',
+                    'The interface simulates role-based screens and shows approved, active listings. All data is accessible to anyone who can inspect this browser’s storage. This is not a secure system for real accounts or identity evidence.',
                   ],
                   [
-                    'Cookies and security',
-                    'An HTTP-only session cookie supports sign-in. Passwords are hashed and protected operations check roles and ownership on the server. Password-reset links are exposed only in local development with demo mode enabled.',
+                    'Simulated sign-in',
+                    'Sign-in is simulated with a per-tab browser session. No authentication cookies or secure server sessions are used. Demo password-reset links are displayed locally rather than emailed. Never use a real password or personal data.',
                   ],
                   [
                     'Retention and requests',
-                    'The local operator controls the database and uploaded files. Ask the person running the demonstration to remove your test information. There is no production privacy contact or automated data deletion service.',
+                    'Use Reset this browser’s demo in Settings, or clear this site’s browser storage, to discard your changes. Other browsers have independent copies of the JSON demo. Clearing browser storage permanently removes your local changes.',
                   ],
                 ]
               : [

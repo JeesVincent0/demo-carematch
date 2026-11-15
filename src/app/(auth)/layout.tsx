@@ -22,7 +22,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             A little support can make a world of difference. Find the people who make everyday life
             feel a little easier.
           </p>
-          <small>CareMatch is a demonstration platform. Use fictional information only.</small>
+          <small>
+            Browser-only JSON demo. Sign-in is simulated, not secure authentication. Use fictional
+            information only.
+          </small>
         </div>
       </aside>
       <section className="auth-panel">{children}</section>

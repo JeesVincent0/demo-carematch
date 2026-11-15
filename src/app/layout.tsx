@@ -3,7 +3,7 @@ import { Toaster } from 'sonner';
 import './globals.css';
 import './fonts.css';
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXTAUTH_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3002'),
   title: {
     default: 'CareMatch | Find Trusted Care Professionals in the UK',
     template: '%s | CareMatch',
